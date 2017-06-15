@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>走进裕沣</title>
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+</head>
+<body>
+<script src="http://localhost:8080/bundle.js"></script>
+<div id="header"></div>
+<div class="page company-page">
+	<div class="bar">
+		<div class="inner">
+			<span>当前位置: </span>
+			<a href="">首页></a>
+			<a href="">走进润兴></a>
+			<span>润兴溯源</span>
+		</div>
+	</div>
+	<div class="content clearfix">
+		<div class="menu-panel">
+			<div class="title">走进裕丰</div>
+			<ul class="menu" id="menuList">
+				<li class="active" aid="articl1"><a href="#articl1">裕丰溯源</a></li>
+				<li aid="articl2"><a href="#articl2">关于润兴</a></li>
+				<li aid="articl3"><a href="#articl3">领导人介绍</a></li>
+				<li aid="articl4"><a href="#articl4">组织架构</a></li>
+				<li aid="articl5"><a href="#articl15">裕丰优势</a></li>
+			</ul>
+		</div>
+		<div class="articl-panel">
+			<div class="articl active" id="articl1">
+				<h2 class="title module-title">{裕丰<span>溯源222</span>}</h2>
+				<div>
+					<h3>集团简介</h3>			
+					<p>中植企业集团有限公司创建于1995年，集团总部位于北京市，集团拥有中融信托、中植资本等30多家全资、控股子公司，目前拥有员工近10000人，资产管理达万亿规模，集团持股40余家上市公司：中南重工、兴业矿业、上海电气、江西长运、TCL集团、贵绳股份、吉恩镍业、福田汽车、三安光电等，是中国最大的民营控股集团之一。</p>
+					<h3>集团简介</h3>			
+					<p>中植企业集团有限公司创建于1995年，集团总部位于北京市，集团拥有中融信托、中植资本等30多家全资、控股子公司，目前拥有员工近10000人，资产管理达万亿规模，集团持股40余家上市公司：中南重工、兴业矿业、上海电气、江西长运、TCL集团、贵绳股份、吉恩镍业、福田汽车、三安光电等，是中国最大的民营控股集团之一。</p>				
+				</div>				
+			</div>
+			<div class="articl" id="articl2">
+				<h2 class="title module-title">{裕丰<span>溯源</span>}</h2>
+				<div>
+					<h3>集团简介</h3>			
+					<p>中植企业集团有限公司创建于1995年，集团总部位于北京市，集团拥有中融信托、中植资本等30多家全资、控股子公司，目前拥有员工近10000人，资产管理达万亿规模，集团持股40余家上市公司：中南重工、兴业矿业、上海电气、江西长运、TCL集团、贵绳股份、吉恩镍业、福田汽车、三安光电等，是中国最大的民营控股集团之一。</p>
+					<h3>集团简介</h3>			
+					<p>中植企业集团有限公司创建于1995年，集团总部位于北京市，集团拥有中融信托、中植资本等30多家全资、控股子公司，目前拥有员工近10000人，资产管理达万亿规模，集团持股40余家上市公司：中南重工、兴业矿业、上海电气、江西长运、TCL集团、贵绳股份、吉恩镍业、福田汽车、三安光电等，是中国最大的民营控股集团之一。</p>				
+				</div>				
+			</div>
+		</div>		
+	</div>
+
+</div>
+<div id="footer"></div>
+<style type="text/css">
+	.menu-panel {
+		line-height: 40px;
+		text-align: center;
+		border: 1px solid #f6f6f6;
+		margin-right: 30px;
+	}
+	.menu-panel li {
+		width: 180px;
+		border-bottom: 1px solid #d7d7d7;
+	}
+	.menu-panel .menu {
+		margin: 0 3px;
+	}
+	.menu-panel li a {
+		color: #333;
+	}
+	.menu-panel li.active a {
+		color: #c0a587;
+	}
+	.menu-panel .title {
+		background: #c0a587;
+		color: #fff;
+	}
+	.page .menu-panel {
+		float: left;
+	}
+	.page .articl-panel {
+		overflow: hidden;
+	}
+	.page .articl-panel .articl {
+		display: none;
+	}
+	.page .articl-panel .articl.active {
+		display: block;
+	}
+	.inner {
+		text-align: right;
+		font-size: 12px;
+		padding: 10px 10px;
+	}
+	.module-title {
+		letter-spacing: 3px;
+		margin-bottom: 30px;
+	}
+	.page .articl-panel .articl p {
+		line-height: 30px;
+		margin-bottom: 15px;
+	}
+	.page .articl-panel .articl h3 {
+		color: #c0a587;
+		margin-bottom: 15px;
+	}
+</style>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+	$('#menuList li').click(function(event){
+		$('#menuList li').removeClass('active')
+		$(this).addClass('active')
+		$('.articl').removeClass('active')
+		$('#'+$(this).attr('aid')).addClass('active')
+		console.log($(event.currentTarget).eq(0).attr('aid'))
+	})
+</script>
+</body>
+</html>

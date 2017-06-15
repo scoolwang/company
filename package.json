@@ -1,0 +1,27 @@
+{
+  "name": "company",
+  "version": "1.0.0",
+  "description": "浙江裕沣担保有限公司",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scoolwang/company.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scoolwang/company/issues"
+  },
+  "homepage": "https://github.com/scoolwang/company#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.3",
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --inline --content-base"
+  }
+}

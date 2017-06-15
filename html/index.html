@@ -1,9 +1,266 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.img-box {
+			background: url(../res/intr-bg.png) no-repeat;
+			width: 50%;
+			height: 450px;
+			float: left;
+		}
+		.txt-box {
+			overflow: hidden;
+			padding-left: 20px;
+		}
+		.txt-box h3 {
+			font-size: 24px;
+			margin-bottom: 2em;
+		}
+		.txt-box p {
+			font-size: 16px;
+			margin-bottom: 2em;
+			line-height: 33px;
+		}
+		.txt-box .button{
+			height: 40px;
+			width: 140px;
+			background: #8a6647;
+			border: 1px solid #f6f6f6;
+			color: #fff;
+			display: block;
+			text-align: center;
+			line-height: 40px;
+		}
+		.intro-panel h2 {
+			padding: 70px 0;
+			text-align: center;
+			font-size: 60px;
+		}
+		.intro-panel {
+			border: 1px solid #fff6ee;
+			padding-bottom: 30px;
+		}
+
+
+		/*************/
+		.advantage-panel h2 {
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+		.advantage-panel .menu-box {
+			float: left;
+			width: 320px;
+		}
+		.advantage-panel .content-box {
+			overflow: hidden;
+		}
+		.menu-list li {
+			padding: 30px 10px;
+			text-align: center;
+			font-size: 20px;
+			border: 1px solid #d7d7d7;
+			margin-top: -1px;
+		}
+		.menu-list li.active {
+			color: #fff;
+			background: #8a6647;	
+		}
+		.advantage-panel .content-box {
+			background: url(../res/adv-bg.png) no-repeat;
+			height: 600px;
+
+		}
+		.cover-txt {
+	    height: 383px;
+	    margin: 82px 0;
+	    background: rgba(255, 255, 255, 0.14);
+	    color: #fff;
+	    border: 1px solid #d7d7d7;			
+	    padding: 30px;
+		}
+		.cover-txt p {
+			line-height: 30px;
+		}
+		/*******************/
+		.business-panel {
+			background: url(../res/bns-bg.png) center no-repeat;
+			height: 450px;
+		}
+		.business-panel h2 {
+			padding: 30px 0;
+			text-align: center;
+		}
+		.business-list {
+			display: flex;
+		}
+		.business-list li {
+			flex: 1;
+			text-align: center;
+		}
+		/*****************/
+		.call-panel {
+			height: 231px;
+			background: url(../res/call-bg.png) center no-repeat;
+			line-height: 231px;
+			text-align: center;	
+			color: #fff;
+		}
+		/****************/
+		.call-form {
+			padding-top: 50px;
+			padding-bottom: 30px;
+		}
+		.call-form h2 {
+			margin-bottom: 30px;
+		}
+		.call-form .company-info {
+			float: left;
+			width: 50%;
+			padding-left: 50px;
+		}
+		.call-form .company-info p {
+			margin-bottom: 15px;
+		}
+		.call-form .form {
+			overflow: hidden;
+		}
+		.call-form .form input {
+			height: 36px;
+			line-height: 36px;
+			padding: 0 10px;
+			width: 250px;
+			border-color: 1px solid #dadada;
+			margin-right: 10px;
+		}
+		.call-form .form li {
+			margin-bottom: 15px;
+		}
+		.call-form .form li span {
+			color: red;
+		}
+		.call-form .form textarea {
+			height: 100px;
+			padding: 10px;
+			line-height: 30px;
+			border: 1px solid #dadada;
+			width: 450px;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+		.call-form .form button {
+			width: 227px;
+			background-color: #ffad2b;
+			border: 1px solid #f98706;
+			color: #fff;
+			padding: 10px 10px;
+			margin-top: 15px;
+		}
+	</style>
 </head>
 <body>
+<script src="http://localhost:8080/bundle.js"></script>
+<div id="header"></div>
+<div class="index">
+	<!-- 公司介绍 -->
+	<div class="intro-panel">
+		<h2 class="title">{<span class="strong-txt">公司</span><span class="txt">介绍</span>}</h2>
+		<div class="content">
+			<div class="img-box">
+			</div>
+			<div class="txt-box">
+				<h3>缓解企业融资难、融资贵问题</h3>
+				<p>浙江裕沣担保有限公司成立于2010月2月，注册资本金3亿元人民币，公司总部设在杭州，内设行政部、财务部、风险处置部、事业部、市场部、稽核部，在全省15个地县市区设有分公司（办事处），另有3个控股企业：平阳县中小企业融资担保有限公司，杭州中颐信资产管理公司、杭州中小企业融资租赁公司</p>
+				<p>近年来，浙江裕沣担保有限公司在各级政府及有关部门的重视关心下，在农行等金融机构的大力支持下，依靠上下同心协力，坚持不懈努力，得到了稳步发展。公司连续4年被评为杭州市先进信用担保机构、A级信用企业。</p>
+				<a class="button">更多+</a>
+			</div>				
+		</div>
+	</div>
 
+	<!-- 公司介绍 -->
+	<div class="intro-panel">
+		<h2 class="title">{<span class="strong-txt">公司</span><span class="txt">介绍</span>}</h2>
+		<div class="content">
+			<div class="img-box">
+			</div>
+			<div class="txt-box">
+				<h3>缓解企业融资难、融资贵问题</h3>
+				<p>浙江裕沣担保有限公司成立于2010月2月，注册资本金3亿元人民币，公司总部设在杭州，内设行政部、财务部、风险处置部、事业部、市场部、稽核部，在全省15个地县市区设有分公司（办事处），另有3个控股企业：平阳县中小企业融资担保有限公司，杭州中颐信资产管理公司、杭州中小企业融资租赁公司</p>
+				<p>近年来，浙江裕沣担保有限公司在各级政府及有关部门的重视关心下，在农行等金融机构的大力支持下，依靠上下同心协力，坚持不懈努力，得到了稳步发展。公司连续4年被评为杭州市先进信用担保机构、A级信用企业。</p>
+				<a class="button">更多+</a>
+			</div>				
+		</div>
+	</div>
+
+
+	<!-- 视频播放 -->
+	<div class="vido-panel">
+		<video src="http://183.134.9.47/11184545.s21d-11.faiusrd.com/58/ABUIABA6GAAg8dzbwwUo4a2BjAQ.mp4?wsiphost=local" poster="../res/intr-bg.png" controls="controls">
+		</video>
+	</div>
+
+	<!-- 公司优势 -->
+	<div class="advantage-panel">
+		<div class="menu-box">
+			<h2 class="title">{<span class="strong-txt">公司</span><span class="txt">优势</span>}</h2>
+			<ul class="menu-list">
+				<li class="active">经营模式日趋完善</li>
+				<li>经营理念与时俱进</li>
+				<li>经营网络稳健拓展</li>
+				<li>经营产品不断开拓</li>
+				<li>风控管理逐步强化</li>
+			</ul>
+		</div>
+		<div class="content-box">
+			<div class="cover-txt">
+				<div class="content box1">
+					<p>这几年裕沣公司在确保业务稳定健康发展的前提下，经营网络也有了很大的拓展。最初我们仅杭州、绍兴、温州三个地级市设有分公司，现在在全省范围内具备条件的地区构建了比较健全的经营网络。已在杭州、温州市、湖州、嘉兴、绍兴、丽水、建德、新昌、嵊州、温岭、临海、三门、天台、乐清、柳市、白象、永嘉、瑞安、平阳、苍南、瑞安等地区设立了办事处或联络点</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 主营业务 -->
+	<div class="business-panel">
+		<h2 class="title">{<span class="strong-txt">主营</span><span class="txt">业务</span>}</h2>
+		<ul class="business-list">
+			<li>农户贷</li>
+			<li>工程履约保函</li>
+			<li>家装分期贷款</li>
+			<li>司法拍卖阶段性担保业务</li>
+		</ul>
+		<a href="">更多+</a>
+	</div>
+	<!-- 联系我们 -->
+	<div class="call-panel">
+		<h2 class="title">{<span class="strong-txt">联系</span><span class="txt">我们</span>}</h2>
+	</div>
+	<!-- 提交表单 -->
+	<div class="call-form">
+		<div class="company-info">
+			<h2>浙江裕沣担保有限公司</h2>
+			<p>地点：杭州市上城区白云路16号</p>
+			<p>邮编：310008   </p>
+			<p>电话：0571-87250598</p>
+			<p>邮箱：zjyfdb@163.com</p>
+		</div>
+		<div class="form">
+			<form>
+				<ul>
+					<li><input type="" name="" placeholder="姓名"> <span>*</span></li>
+					<li><input type="" name="" placeholder="邮箱"> <span>*</span></li>
+					<li><input type="" name="" placeholder="电话"> <span>*</span></li>
+					<li><textarea placeholder="内容"></textarea> <span>*</span></li>
+				</ul>
+				<button type="submit" class="button">提交</button>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="footer"></div>
+<script type="text/javascript" src="../js/index.js"></script>
 </body>
 </html>

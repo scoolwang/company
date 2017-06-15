@@ -1,0 +1,63 @@
+body,html,p,div,ul,li {
+	padding: 0;
+	margin: 0;
+	font-family: 微软雅黑;
+	color: #333;
+}
+p,ul,h1,h2,h3,h4,h5,input{padding: 0;margin:0;}
+li{list-style: none;}
+a:link,a:visited,a:hover,a:active{text-decoration: none; cursor: pointer;}
+body{
+  background: #fafafa;
+  font-family: "PingFangSC-Light","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","STHeitiSC-Light","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+.clearfix{
+  zoom: 1;
+}
+.clearfix:after{
+  display: block;
+  overflow: hidden;
+  content: '';
+  clear: both;
+  height: 0;
+}
+.header .nav-wrap {
+	box-sizing: border-box;
+	height: 140px;
+	background: #000;
+	padding-left: 55px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 5px solid #c0a587;
+}
+.header .nav {
+	display: flex;
+}
+.header .nav li {
+	flex: 1;
+	line-height: 100px;
+}
+.header .nav li a {
+	color: #c0a587;
+}
+.log {
+	display: block;
+	float: left;
+	height: 100px;
+	width: 215px;
+	background: blue;
+	margin-right: 150px;
+}
+.nav-inner {
+	overflow: hidden;
+}		
+.header .bg {
+	background: url(../res/bg.png) center no-repeat;
+	height: 735px;
+}
+.module-title {
+	color: #c5ac91;
+}
+.module-title span {
+	color: #333;
+}

@@ -1,0 +1,28 @@
+.footer {
+	height: 157px;
+	background: #464646;
+	padding-top: 30px;
+	padding-bottom: 15px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.footer .nav {
+	display: inline-block;
+	margin: 0 auto;
+}
+.footer .nav li {
+	display: inline-block;
+	color: #fff;
+	padding: 0 10px;
+}
+.footer .nav li a {
+	color: #fff;
+}
+.footer .copy {
+	padding-top: 25px;
+	line-height: 25px;
+	font-size: 14px;
+}
+.footer .copy p {
+	color: #c0a587;
+}
