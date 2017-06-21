@@ -84,6 +84,7 @@
 		}
 		.cover-txt p {
 			line-height: 30px;
+			color: #fff;
 		}
 		/*******************/
 		.business-panel {
@@ -114,51 +115,9 @@
 			padding-top: 50px;
 			padding-bottom: 30px;
 		}
-		.call-form h2 {
-			margin-bottom: 30px;
-		}
 		.call-form .company-info {
-			float: left;
-			width: 50%;
 			padding-left: 50px;
-		}
-		.call-form .company-info p {
-			margin-bottom: 15px;
-		}
-		.call-form .form {
-			overflow: hidden;
-		}
-		.call-form .form input {
-			height: 36px;
-			line-height: 36px;
-			padding: 0 10px;
-			width: 250px;
-			border-color: 1px solid #dadada;
-			margin-right: 10px;
-		}
-		.call-form .form li {
-			margin-bottom: 15px;
-		}
-		.call-form .form li span {
-			color: red;
-		}
-		.call-form .form textarea {
-			height: 100px;
-			padding: 10px;
-			line-height: 30px;
-			border: 1px solid #dadada;
-			width: 450px;
-			vertical-align: middle;
-			margin-right: 10px;
-		}
-		.call-form .form button {
-			width: 227px;
-			background-color: #ffad2b;
-			border: 1px solid #f98706;
-			color: #fff;
-			padding: 10px 10px;
-			margin-top: 15px;
-		}
+		}		
 	</style>
 </head>
 <body>
@@ -198,7 +157,7 @@
 
 	<!-- 视频播放 -->
 	<div class="vido-panel">
-		<video src="http://183.134.9.47/11184545.s21d-11.faiusrd.com/58/ABUIABA6GAAg8dzbwwUo4a2BjAQ.mp4?wsiphost=local" poster="../res/intr-bg.png" controls="controls">
+		<video src="http://183.134.9.47/11184545.s21d-11.faiusrd.com/58/ABUIABA6GAAg8dzbwwUo4a2BjAQ.mp4?wsiphost=local" poster="../res/video-bg.jpg" controls="controls">
 		</video>
 	</div>
 
@@ -239,28 +198,12 @@
 		<h2 class="title">{<span class="strong-txt">联系</span><span class="txt">我们</span>}</h2>
 	</div>
 	<!-- 提交表单 -->
-	<div class="call-form">
-		<div class="company-info">
-			<h2>浙江裕沣担保有限公司</h2>
-			<p>地点：杭州市上城区白云路16号</p>
-			<p>邮编：310008   </p>
-			<p>电话：0571-87250598</p>
-			<p>邮箱：zjyfdb@163.com</p>
-		</div>
-		<div class="form">
-			<form>
-				<ul>
-					<li><input type="" name="" placeholder="姓名"> <span>*</span></li>
-					<li><input type="" name="" placeholder="邮箱"> <span>*</span></li>
-					<li><input type="" name="" placeholder="电话"> <span>*</span></li>
-					<li><textarea placeholder="内容"></textarea> <span>*</span></li>
-				</ul>
-				<button type="submit" class="button">提交</button>
-			</form>
-		</div>
-	</div>
+	<div id="callForm"></div>
 </div>
 <div id="footer"></div>
 <script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+	$('#callForm').load('../html/call-tpl.html')
+</script>
 </body>
 </html>

@@ -10,6 +10,7 @@ a:link,a:visited,a:hover,a:active{text-decoration: none; cursor: pointer;}
 body{
   background: #fafafa;
   font-family: "PingFangSC-Light","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","STHeitiSC-Light","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-size: 14px;
 }
 .clearfix{
   zoom: 1;
@@ -24,8 +25,8 @@ body{
 .header .nav-wrap {
 	box-sizing: border-box;
 	height: 140px;
-	background: #000;
-	padding-left: 55px;
+	background: #1a1a1a;
+	padding-left: 5px;
 	padding-top: 20px;
 	padding-bottom: 10px;
 	border-bottom: 5px solid #c0a587;
@@ -45,8 +46,8 @@ body{
 	float: left;
 	height: 100px;
 	width: 215px;
-	background: blue;
 	margin-right: 150px;
+	background: url(../res/log.png) center no-repeat;
 }
 .nav-inner {
 	overflow: hidden;
@@ -55,9 +56,140 @@ body{
 	background: url(../res/bg.png) center no-repeat;
 	height: 735px;
 }
+
+/*标题*/
 .module-title {
 	color: #c5ac91;
 }
 .module-title span {
 	color: #333;
+}
+.module-title {
+	letter-spacing: 3px;
+	margin-bottom: 30px;
+}
+/*联系我们*/
+.call-form h2 {
+	margin-bottom: 30px;
+}
+.call-form .company-info {
+	float: left;
+	width: 50%;
+	padding-left: 50px;
+}
+.call-form .company-info p {
+	margin-bottom: 15px;
+}
+.call-form .form {
+	overflow: hidden;
+}
+.call-form .form input {
+	height: 36px;
+	line-height: 36px;
+	padding: 0 10px;
+	width: 250px;
+	border-color: 1px solid #dadada;
+	margin-right: 10px;
+}
+.call-form .form li {
+	margin-bottom: 15px;
+}
+.call-form .form li span {
+	color: red;
+}
+.call-form .form textarea {
+	height: 100px;
+	padding: 10px;
+	line-height: 30px;
+	border: 1px solid #dadada;
+	width: 450px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.call-form .form button {
+	width: 227px;
+	background-color: #ffad2b;
+	border: 1px solid #f98706;
+	color: #fff;
+	padding: 10px 10px;
+	margin-top: 15px;
+}
+
+/***左右结构**/
+.page .menu-panel {
+	float: left;
+}
+.page .articl-panel {
+	overflow: hidden;
+	padding-bottom: 30px;
+}
+.page .articl-panel .articl {
+	display: none;
+}
+.page .articl-panel .articl.active {
+	display: block;
+}
+.page .bar .inner {
+	text-align: right;
+	font-size: 12px;
+	padding: 10px 10px;
+	padding-bottom: 30px;
+}
+.page .articl-panel .articl p {
+	line-height: 30px;
+	margin-bottom: 30px;
+}
+.page .articl-panel .articl h3 {
+	color: #c0a587;
+	margin-bottom: 15px;
+}
+/*导航*/
+.menu-panel {
+	line-height: 40px;
+	text-align: center;
+	border: 1px solid #f6f6f6;
+	margin-right: 30px;
+	margin-left: 2px;
+}
+.menu-panel li {
+	width: 180px;
+	border-bottom: 1px solid #d7d7d7;
+}
+.menu-panel li:hover {
+	color: #c0a587;
+}
+.menu-panel li:last-child {
+	border:none;
+}
+.menu-panel .menu {
+	margin: 0 3px;
+}
+.menu-panel li a {
+	color: #333;
+}
+.menu-panel li.active a {
+	color: #c0a587;
+}
+.menu-panel .title {
+	background: #c0a587;
+	color: #fff;
+}
+
+/**左侧链接菜单**/
+.link-menu {
+	padding: 10px;
+	text-align: left;
+}
+.link-menu {
+	border:1px solid #dbc7af;
+}
+.link-menu  li {
+	border: none;
+}
+.link-menu  li.active a {
+	color: #c0a587;
+}
+.link-menu li:hover a {
+	color: #c0a587;
+	font-weight: bold;
 }

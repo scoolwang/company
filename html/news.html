@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>新闻资讯</title>
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		.news-list {
+			background: #dbdbdb;
+			padding: 0 10px;
+		}
+		.news-list li {
+			padding: 10px;
+			border-bottom:1px dashed #555252;
+		}
+		.news-list li {
+			padding-right: 150px;
+			position: relative;
+		}
+		.news-list li a {
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: #333;
+			font-weight: bold;
+			font-size: 14px;
+		}
+		.news-list li span {
+			position: absolute;
+			display: inline-block;
+			top: 10px;
+			right: 10px;
+			font-size: 12px;
+		}
+		.news-list li:last-child {
+			border: none;
+		}
+		/****************/
+		.event .item {
+			position: relative;
+			padding-left: 200px;
+		}
+		.event .item .time {
+			position: absolute;
+			left: 0px;
+			top: 18px;
+			color: #989898;
+		}
+		.event .inner {
+			position: relative;
+			border-left: 1px solid #ccc;
+			padding: 10px 10px 50px 30px;
+		}
+		.event .item:last-child .inner{
+			padding-bottom: 15px;
+		}
+		.event .icon {
+			display: block;
+		    position: absolute;
+		    width: 10px;
+		    height: 10px;
+		    background: #ccc;
+		    left: -9px;
+		    top: 18px;
+		    border-radius: 50%;
+		    border: 3px solid #eaeaea;
+		}
+		.event .title a {
+			display: block;
+			padding-bottom: 10px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;	
+			font-size: 16px;
+			color: #333;		
+		}
+		.event .desc {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: #989898;			
+		}
+		.page-footer {
+			text-align: center;
+			margin-top: 20px;
+		}
+		.page-footer span {
+			display: inline-block;
+			padding: 10px;
+			color: #989898;
+		}
+	</style>
+</head>
+<body>
+<script src="http://localhost:8080/bundle.js"></script>
+<div id="header"></div>
+<div class="page company-page">
+	<div class="bar">
+		<div class="inner">
+			<span>当前位置: </span>
+			<a href="">首页></a>
+			<a href="">走进润兴></a>
+			<span id="foldSelect">润兴溯源</span>
+		</div>
+	</div>
+	<div class="content clearfix">
+		<div class="menu-panel">
+			<div class="title">走进裕丰</div>
+			<ul class="menu" id="menuList">
+				<li class="active" aid="articl1"><a href="#articl1">裕丰新闻</a></li>
+				<li aid="articl2"><a href="#articl2">经济金融动态</a></li>
+			</ul>
+		</div>
+		<div class="articl-panel">
+			<div class="articl active" id="articl1">
+				<h2 class="title module-title">{裕丰<span>新闻</span>}</h2>
+				<div>
+					<ul class="news-list">
+						<li><a href="./artical.html">新闻标题1</a><span>2017-4-24</span></li>
+						<li><a href="./artical.html">新闻标题</a><span>2017-4-24</span></li>
+						<li><a href="./artical.html">新闻标题</a><span>2017-4-24</span></li>
+						<li><a href="./artical.html">新闻标题</a><span>2017-4-24</span></li>
+					</ul>			
+				</div>				
+			</div>
+			<div class="articl" id="articl2">
+				<h2 class="title module-title">{经济<span>金融动态</span>}</h2>
+				<div class="event">
+					<div class="item">
+						<span class="time">2016/10/08</span>
+						<div class="inner">
+							<i class="icon"></i>
+							<div class="title"><a href="">近70家新三板企业今年开展融资租赁业务 多采用售后回租</a></div>
+							<div class="desc">当下新三板定增困难重重，但融资需求又并未减少，企业采取多种其他方式融资屡见不鲜，租赁融资便是其中一种情况。据中国网.当下新三板定增困难重重，但融资需求又并未减少，企业采取多种其他方式融资屡见不鲜，租赁融资便是其中一种情况。据中国网.</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="time">2016/10/08</span>
+						<div class="inner">
+							<i class="icon"></i>
+							<div class="title"><a href="">近70家新三板企业今年开展融资租赁业务 多采用售后回租</a></div>
+							<div class="desc">当下新三板定增困难重重，但融资需求又并未减少，企业采取多种其他方式融资屡见不鲜，租赁融资便是其中一种情况。据中国网.当下新三板定增困难重重，但融资需求又并未减少，企业采取多种其他方式融资屡见不鲜，租赁融资便是其中一种情况。据中国网.</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="time">2016/10/08</span>
+						<div class="inner">
+							<i class="icon"></i>
+							<div class="title"><a href="">近70家新三板企业今年开展融资租赁业务 多采用售后回租</a></div>
+							<div class="desc">当下新三板定增困难重重，但融资需求又并未减少，企业采取多种其他方式融资屡见不鲜，租赁融资便是其中一种情况。据中国网.当下新三板定增困难重重，但融资需求又并未减少，企业采取多种其他方式融资屡见不鲜，租赁融资便是其中一种情况。据中国网.</div>
+						</div>
+					</div>					
+				</div>
+				<div class="page-footer">
+					<span class="last">上一页</span>
+					<span class="num">1</span>
+					<span class="next">下一页</span>
+				</div>				
+			</div>
+		</div>		
+	</div>
+
+</div>
+<div id="footer"></div>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+	$('#menuList li').click(function(event){
+		$('#menuList li').removeClass('active')
+		$('#foldSelect').text($(this).text())
+		$(this).addClass('active')
+		$('.articl').removeClass('active')
+		$('#'+$(this).attr('aid')).addClass('active')
+		console.log($(event.currentTarget).eq(0).attr('aid'))
+	})
+</script>
+</body>
+</html>
