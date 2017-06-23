@@ -35,11 +35,35 @@ body{
 	display: flex;
 }
 .header .nav li {
+	position: relative;
 	flex: 1;
 	line-height: 100px;
+	text-align: center;
 }
 .header .nav li a {
 	color: #c0a587;
+}
+.header .nav li .menu {
+    position: absolute;
+    top: 64px;
+    background: #000;
+    left: 50%;
+    width: 86px;
+    margin-left: -42px;
+    box-sizing: border-box;
+    display: none;
+}
+.header .nav li:hover .menu {
+	display: block;
+}
+.menu-item {
+	display: block;
+	padding: 10px 0;
+	line-height: 20px;
+}
+.menu-item:hover {
+	background: #ccc;
+
 }
 .log {
 	display: block;
@@ -48,10 +72,7 @@ body{
 	width: 215px;
 	margin-right: 150px;
 	background: url(../res/log.png) center no-repeat;
-}
-.nav-inner {
-	overflow: hidden;
-}		
+}	
 .header .bg {
 	background: url(../res/bg.png) center no-repeat;
 	height: 735px;

@@ -58,16 +58,55 @@
 		.advantage-panel .content-box {
 			overflow: hidden;
 		}
+		.menu-list li:hover .cover-bg{
+			height: 90px;
+			top:0;
+			visibility: visible;
+		}
+		.menu-list li:hover .txt-bg {
+			color: #fff;
+		}
+		/*@keyframes anm {
+			0% {height: 90px}
+			50% {height: 90px}
+			80% {height: 70px}
+			100% {height: 90px}
+		}*/
+		.menu-list li .cover-bg {
+			transition: all .2s ease-out;
+			/*animation: anm 500ms paused;*/
+			height: 0;
+			background: #8a6647;
+			width: 100%;
+			height: 30px;
+			top: 30px;
+			color: #fff;
+			visibility: hidden;
+			position: absolute;
+			z-index: 1;
+		}
+		.menu-list li .txt-bg {
+			line-height: 90px;
+			position: relative;
+			z-index: 2;
+		}
 		.menu-list li {
-			padding: 30px 10px;
+			position: relative;
+			height: 90px;
+			line-height: 90px;
 			text-align: center;
 			font-size: 20px;
 			border: 1px solid #d7d7d7;
 			margin-top: -1px;
 		}
-		.menu-list li.active {
+		.menu-list li.active .txt-bg {
 			color: #fff;
-			background: #8a6647;	
+		}
+		.menu-list li.active .cover-bg {
+			color: #fff;	
+			visibility: visible;
+			height: 90px;
+			top: 0;
 		}
 		.advantage-panel .content-box {
 			background: url(../res/adv-bg.png) no-repeat;
@@ -85,6 +124,12 @@
 		.cover-txt p {
 			line-height: 30px;
 			color: #fff;
+		}
+		.cover-txt .content {
+			display: none;
+		}
+		.cover-txt .content.active {
+			display: block;
 		}
 		/*******************/
 		.business-panel {
@@ -165,18 +210,39 @@
 	<div class="advantage-panel">
 		<div class="menu-box">
 			<h2 class="title">{<span class="strong-txt">公司</span><span class="txt">优势</span>}</h2>
-			<ul class="menu-list">
-				<li class="active">经营模式日趋完善</li>
-				<li>经营理念与时俱进</li>
-				<li>经营网络稳健拓展</li>
-				<li>经营产品不断开拓</li>
-				<li>风控管理逐步强化</li>
+			<ul class="menu-list" id="switchMenu">
+				<li class="active">
+					<div class="txt-bg">经营模式日趋完善</div>
+					<div class="cover-bg"></div>
+				</li>
+				<li>
+					<div class="txt-bg">经营理念与时俱进</div>
+					<div class="cover-bg"></div>
+				</li>
+				<li>
+					<div class="txt-bg">经营网络稳健拓展</div>
+					<div class="cover-bg"></div>
+				</li>
+				<li>
+					<div class="txt-bg">经营产品不断开拓</div>
+					<div class="cover-bg"></div>
+				</li>
+				<li>
+					<div class="txt-bg">风控管理逐步强化</div>
+					<div class="cover-bg"></div>
+				</li>
 			</ul>
 		</div>
 		<div class="content-box">
-			<div class="cover-txt">
-				<div class="content box1">
+			<div class="cover-txt" id="contentTxt">
+				<div class="content box1 active">
 					<p>这几年裕沣公司在确保业务稳定健康发展的前提下，经营网络也有了很大的拓展。最初我们仅杭州、绍兴、温州三个地级市设有分公司，现在在全省范围内具备条件的地区构建了比较健全的经营网络。已在杭州、温州市、湖州、嘉兴、绍兴、丽水、建德、新昌、嵊州、温岭、临海、三门、天台、乐清、柳市、白象、永嘉、瑞安、平阳、苍南、瑞安等地区设立了办事处或联络点</p>
+				</div>
+				<div class="content box2">
+					<p>box2</p>
+				</div>
+				<div class="content box3">
+					<p>box3</p>
 				</div>
 			</div>
 		</div>
@@ -204,6 +270,13 @@
 <script type="text/javascript" src="../js/index.js"></script>
 <script type="text/javascript">
 	$('#callForm').load('../html/call-tpl.html')
+	$('#switchMenu li').hover(function () {
+		var index = $('#switchMenu li').index($(this))
+		$('#switchMenu .active').removeClass('active')
+		$(this).addClass('active')
+		$('#contentTxt .active').removeClass('active')
+		$('#contentTxt .box' + (index+1)).addClass('active')
+	})
 </script>
 </body>
 </html>
