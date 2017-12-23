@@ -22,14 +22,19 @@ body{
   clear: both;
   height: 0;
 }
+.header {
+	background-color: #000;
+}
 .header .nav-wrap {
 	box-sizing: border-box;
-	height: 140px;
-	background: #1a1a1a;
+	height: 142px;
+	line-height: 142px;
 	padding-left: 5px;
-	padding-top: 20px;
-	padding-bottom: 10px;
-	border-bottom: 5px solid #c0a587;
+	border-bottom: 2px solid #b18141;
+}
+.header .nav-inner {
+	width: 1330px;
+	margin: 0 auto;	
 }
 .header .nav {
 	display: flex;
@@ -37,7 +42,7 @@ body{
 .header .nav li {
 	position: relative;
 	flex: 1;
-	line-height: 100px;
+	line-height: 142px;
 	text-align: center;
 }
 .header .nav li a {
@@ -68,14 +73,14 @@ body{
 .log {
 	display: block;
 	float: left;
-	height: 100px;
-	width: 215px;
+	height: 142px;
+	width: 243px;
 	margin-right: 150px;
-	background: url(../res/log.png) center no-repeat;
+	background: url(../res/logo.png) center no-repeat;
 }	
 .header .bg {
-	background: url(../res/bg.png) center no-repeat;
-	height: 735px;
+	background: url(../res/bg.jpg) top center no-repeat;
+	height: 760px;
 }
 
 /*标题*/
@@ -92,11 +97,11 @@ body{
 /*联系我们*/
 .call-form h2 {
 	margin-bottom: 30px;
+	font-weight: normal;
 }
 .call-form .company-info {
 	float: left;
-	width: 50%;
-	padding-left: 50px;
+	padding-right: 340px;
 }
 .call-form .company-info p {
 	margin-bottom: 15px;
@@ -108,9 +113,10 @@ body{
 	height: 36px;
 	line-height: 36px;
 	padding: 0 10px;
-	width: 250px;
-	border-color: 1px solid #dadada;
+	width: 672px;
+	border: 0 solid #dadada;
 	margin-right: 10px;
+	background-color: #f3f5f7;
 }
 .call-form .form li {
 	margin-bottom: 15px;
@@ -118,22 +124,30 @@ body{
 .call-form .form li span {
 	color: red;
 }
+.call-form .form-title {
+	margin-bottom: 30px;
+}
 .call-form .form textarea {
 	height: 100px;
 	padding: 10px;
 	line-height: 30px;
-	border: 1px solid #dadada;
-	width: 450px;
+	border: 0px solid #dadada;
+	width: 672px;
 	vertical-align: middle;
 	margin-right: 10px;
+	background-color: #f3f5f7;
 }
 .call-form .form button {
 	width: 227px;
-	background-color: #ffad2b;
-	border: 1px solid #f98706;
+	background-color: #604d3f;
+	border: 1px solid #604d3f;
 	color: #fff;
 	padding: 10px 10px;
 	margin-top: 15px;
+}
+.call-form {
+	width: 1330px;
+	margin: 0 auto;	
 }
 
 /***左右结构**/
@@ -150,11 +164,44 @@ body{
 .page .articl-panel .articl.active {
 	display: block;
 }
+.bar-menu {
+	background-color: #d6a966;
+	color: #fff;
+	line-height: 60px;
+	width: 220px;
+	text-align: center;
+}
+.bar-box .index-icon {
+	width: 14px;
+	height: 15px;
+	background: url(../res/home-icon.png) no-repeat;
+	display: inline-block;
+}
+.bar-box {
+	height: 60px;
+	background-color: #b18141;
+}
+.bar {
+	width: 1330px;
+	margin: 0 auto;
+	display: flex;
+}
 .page .bar .inner {
 	text-align: right;
 	font-size: 12px;
-	padding: 10px 10px;
-	padding-bottom: 30px;
+	flex: 1;
+	line-height: 60px;
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;	
+}
+.page .bar .item {
+	padding: 0 5px;
+	font-size: 13px;
+	opacity: 0.8;
+}
+.page .bar .inner, .page .bar .inner a {
+	color: #fff;
 }
 .page .articl-panel .articl p {
 	line-height: 30px;

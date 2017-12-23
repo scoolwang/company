@@ -135,18 +135,223 @@
 		/*******************/
 		.business-panel {
 			background: url(../res/bns-bg.png) center no-repeat;
-			height: 450px;
+			height: 806px;
+			position: relative;
 		}
 		.business-panel h2 {
-			padding: 30px 0;
 			text-align: center;
+			padding-top: 90px;
 		}
 		.business-list {
 			display: flex;
+			width: 1330px;
+			margin: 0 auto;
+			margin-top: 100px;
+
 		}
 		.business-list li {
 			flex: 1;
 			text-align: center;
+		}
+		.tip {
+			text-align: center;
+			font-size: 18px;
+			color: #9e9d9e;
+			margin-top: 30px;
+		}
+		.icon {
+			background: url(../res/icons.png) no-repeat;
+			width: 132px;
+			height: 152px;
+			margin: 0 auto;
+			background-position: -12px 0;
+		}
+		.link-more {
+			margin-top: 100px;
+			width: 155px;
+			text-align: center;
+			display: block;
+			margin: 0 auto;
+			padding: 12px 0px;
+			color: #604d3f;
+			border: 1px solid #604d3f;
+			font-size: 20px;
+			margin-top: 100px;
+		}
+		.susong-icon {
+			background-position: -310px 0;
+		}
+		.daikuan-icon {
+			background-position: -595px 0;
+		}
+		.fenqi-icon {
+			background-position: -890px 0;
+		}
+		.gongcheng-icon {
+			background-position: -1180px 0;
+		}
+		.icon-txt {
+			text-align: center;
+			margin-top: 40px;
+			letter-spacing: 2px;
+			font-size: 20px;
+		}
+		/*****************/
+		.main-panel {
+			background: url(../res/bg-1.png) no-repeat top;
+			padding-top: 220px;
+			padding-bottom: 220px;			
+		}
+		.main-inner {
+			display: flex;
+		}
+		.main-left {
+			width: 495px;
+		}
+		.main-right {
+			background-color: #fff;
+			width: 835px;
+		}
+		.main-top {
+			height: 320px;
+			/*background-color: #604d3f;*/
+			background: url(../res/txt2.png) #604d3f center no-repeat;
+		}
+		.main-bottom {
+			height: 400px;
+			background: url(../res/bg-2.jpg) center no-repeat;
+		}	
+		.main-inner {
+			width: 1330px;
+			height: 720px;
+			margin: 0 auto;
+		}	
+		.sec-circle {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			color: #80552f;
+			font-size: 14px;
+			border: 1px solid #80552f;
+			text-align: center;
+			line-height: 30px;
+			margin: 0 auto;
+			display: inline-block;
+		}
+		.sec-txt {
+			text-align: center;
+			font-size: 15px;
+			color: #80552f;
+			vertical-align: top;
+		}
+		.sec-box {
+			display: inline-block;
+			margin-right: 68px;
+			position: relative;
+		}
+		.main-title {
+			font-size: 22px;
+			color: #604c3f;
+			font-weight: bold;
+			margin-bottom: 50px;
+		}
+		.sec-line {
+			width: 68px;
+			top: -4px;
+			height: 1px;
+			background-color: #d9ccc0;
+			display: inline-block;
+			position: relative;
+		}
+		.sec-inner {
+			background-color: #fff;
+			position: relative;
+		}
+		.sec-txt {
+			display: inline-block;
+		}
+		.part {
+			padding-top: 70px;
+			padding-left: 45px;
+			box-sizing: border-box;
+		}
+		.part1 {
+			height: 320px;
+		}
+		.part2 {
+			background-color: #f5f3ee;
+			height: 400px;
+		}
+		.sec-number {
+			margin-bottom: 15px;
+		}
+		.main-menu ul {
+			border-bottom: 1px solid #e7e3dc;
+			margin-bottom: 45px;
+		}
+		.main-item {
+		    height: 40px;
+		    background-color: #ede7e3;
+		    border-radius: 10px 10px 0 0;
+		    padding: 0 15px;
+		    color: #604d3f;
+		    display: inline-block;
+		    margin-right: 30px;
+		    line-height: 40px;
+		    font-size: 15px;
+		}
+		.part2 .sec-line {
+			width: 90px;
+		}
+		.main-active {
+			background-color: #604d3f;
+			color: #fff;
+		}
+		.window {
+			position: absolute;
+			right: 65px;
+			top: 65px;	
+			display: flex;
+			align-items: flex-end;		
+		}
+		.window-menu-item {
+			width: 62px;
+			height: 62px;
+			background-color: #fff;
+			border: 1px solid #e8e8e8;
+			margin-top: 2px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.window-icon {
+			display: block;
+			width: 30px;
+			height: 30px;
+			background: url(../res/window-icons.png) no-repeat;
+			background-position: 0 0;
+		}
+		.arrow-icon {
+			height: 15px;
+		}
+		.code-img {
+			padding: 20px;
+			background-color: #a3a2a0;
+		}
+		.window-icon {
+
+		}
+		.call-icon {
+
+		}
+		.user-icon {
+			background-position: 0 -60px;
+		}
+		.code-icon {
+			background-position: 0 -121px;
+		}
+		.arrow-icon {
+			background-position: 0 -197px;
 		}
 		/*****************/
 		.call-panel {
@@ -159,12 +364,11 @@
 		/****************/
 		.call-form {
 			padding-top: 50px;
-			padding-bottom: 30px;
+			padding-bottom: 70px;
 		}
 		.call-form .company-info {
 			padding-left: 50px;
 		}	
-
 		/***************/
 		video {
 			width: 100%;
@@ -176,7 +380,7 @@
 <div id="header"></div>
 <div class="index">
 	<!-- 公司介绍 -->
-	<div class="intro-panel">
+	<!-- <div class="intro-panel">
 		<h2 class="title">{<span class="strong-txt">公司</span><span class="txt">介绍</span>}</h2>
 		<div class="content">
 			<div class="img-box">
@@ -188,17 +392,17 @@
 				<a class="button">更多+</a>
 			</div>				
 		</div>
-	</div>
+	</div> -->
 
 
 	<!-- 视频播放 -->
-	<div class="vido-panel">
+	<!-- <div class="vido-panel">
 		<video src="http://183.134.9.47/11184545.s21d-11.faiusrd.com/58/ABUIABA6GAAg8dzbwwUo4a2BjAQ.mp4?wsiphost=local" poster="../res/video-bg.jpg" controls="controls">
 		</video>
-	</div>
+	</div> -->
 
 	<!-- 公司优势 -->
-	<div class="advantage-panel">
+	<!-- <div class="advantage-panel">
 		<div class="menu-box">
 			<h2 class="title">{<span class="strong-txt">公司</span><span class="txt">优势</span>}</h2>
 			<ul class="menu-list" id="switchMenu">
@@ -237,25 +441,125 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- 主营业务 -->
 	<div class="business-panel">
-		<h2 class="title">{<span class="strong-txt">主营</span><span class="txt">业务</span>}</h2>
+		<h2 class="title">
+			<img src="../res/txt.png" />
+		</h2>
+		<p class="tip">服务宗旨： 普惠、便捷、高效</p>
 		<ul class="business-list">
-			<li>农户贷</li>
-			<li>工程履约保函</li>
-			<li>家装分期贷款</li>
-			<li>司法拍卖阶段性担保业务</li>
+			<li>
+				<div class="icon nongdai-icon"></div>
+				<p class="icon-txt">农户贷</p>
+			</li>
+			<li>
+				<div class="icon susong-icon"></div>
+				<p class="icon-txt">诉讼保全担保</p></li>
+			<li><div class="icon daikuan-icon"></div>
+				<p class="icon-txt">公司贷款担保</p></li>
+			<li><div class="icon fenqi-icon"></div>
+				<p class="icon-txt">农贷卡分期担保</p></li>
+				<li><div class="icon gongcheng-icon"></div>
+				<p class="icon-txt">工程履约担保</p></li>
 		</ul>
-		<a href="">更多+</a>
+		<a class="link-more" href="">更多+</a>
+		<div class="window">
+			<div class="code-img">
+				<img src="../res/code.png" alt="">
+			</div>
+			<div class="window-menu">
+				<div class="window-menu-item">
+					<span class="call-icon window-icon"></span>
+				</div>
+				<div class="window-menu-item">
+					<span class="user-icon window-icon"></span>
+				</div>
+				<div class="window-menu-item">
+					<span class="code-icon window-icon"></span>
+				</div>
+				<div class="window-menu-item">
+					<span class="arrow-icon window-icon"></span>
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-- 联系我们 -->
-	<div class="call-panel">
-		<h2 class="title">{<span class="strong-txt">联系</span><span class="txt">我们</span>}</h2>
+	<!-- 核心业务流程 -->
+	<div class="main-panel">
+		<div class="main-inner">
+			<div class="main-left">
+				<div class="main-top">
+				</div>
+				<div class="main-bottom">
+				</div>
+			</div>
+			<div class="main-right">
+				<div class="part1 part">
+					<p class="main-title">农贷担保业务</p>
+					<div class="sec">
+						<div class="sec-number">
+							<div class="sec-circle">1</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">2</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">3</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">4</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">5</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">6</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">7</div>
+						</div>
+						<div class="sec-txts">
+							<span class="sec-txt" style="margin-right: 60px;">申请</span>			
+							<span class="sec-txt" style="margin-right: 50px;">签订合同</span>			
+							<span class="sec-txt" style="margin-right: 42px;">支付保费</span>			
+							<span class="sec-txt" style="margin-right: 45px;">银行放款</span>			
+							<span class="sec-txt" style="margin-right: 40px;">保后检查</span>			
+							<span class="sec-txt" style="margin-right: 13px;">还贷（续贷）</span>			
+							<span class="sec-txt">解除（续签）</span>		
+						</div>					
+					</div>
+				</div>
+				<div class="part2 part">
+					<p class="main-title">诉讼财产保全担保业务</p>
+					<div class="main-menu">
+						<ul>
+							<li class="main-item main-active ">快捷服务流程（2小时出保函）</li>
+							<li class="main-item">普通服务流程</li>
+						</ul>
+					</div>
+					<div class="sec">
+						<div class="sec-number" style="margin-left: 24px;">
+							<div class="sec-circle">1</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">2</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">3</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">4</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">5</div>
+						</div>
+						<div class="sec-txts">
+							<span class="sec-txt" style="margin-right: 34px; width: 90px;">扫码加微信（联系客服）</span>			
+							<span class="sec-txt" style="margin-right: 50px;">传递案件资料</span>			
+							<span class="sec-txt" style="margin-right: 68px;">审核资料</span>			
+							<span class="sec-txt" style="margin-right: 66px;">支付保费</span>			
+							<span class="sec-txt">出具保函</span>	
+						</div>					
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- 提交表单 -->
-	<div id="callForm"></div>
+	<div id="callForm">
+		
+	</div>
 </div>
 <div id="footer"></div>
 <script type="text/javascript" src="../js/index.js"></script>
