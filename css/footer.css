@@ -13,11 +13,11 @@
 .footer .nav li {
 	display: inline-block;
 	color: #a58d7c;
-	padding: 0 10px;
+	padding: 0 30px;
 }
 .footer .nav li a {
 	color: #a58d7c;
-	font-size: 13px;
+	font-size: 16px;
 }
 .footer .copy {
 	line-height: 25px;

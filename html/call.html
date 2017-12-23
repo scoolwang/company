@@ -6,47 +6,264 @@
 	<link rel="stylesheet" type="text/css" href="../css/footer.css">
 	<script type="text/javascript" src="../js/jquery.js"></script>
 	<style type="text/css">
-		.page .call-form .company-info {
-			padding-left: 0;
-			width: 440px;
+		.content-inner {
+			width: 1330px;
+			margin: 0 auto;
+			display: flex;
+			overflow: hidden;
 		}
+		.content {
+			padding: 150px 0;
+		}
+		.call-page .content-left .name {
+			font-size: 30px;
+			letter-spacing: 3px;
+			font-weight: bold;
+		}
+		.call-page .content-left {
+			margin-right: 295px;
+		}
+		.call-page .content-left .pinyin {
+			font-size: 13px;
+			margin-top: 15px;
+			margin-bottom: 55px;
+			opacity: 0.4;
+			letter-spacing: 2px;
+		}
+		.word {
+			font-size: 14px;
+			line-height: 30px;
+		}
+		.part-name {
+			margin-top: 25px;
+			font-weight: bold;
+		}
+		.section {
+			display: flex;
+			margin-bottom: 20px;
+		}
+		.section .name {
+			width:  108px;
+			margin-right: 40px;
+			font-size: 14px;
+		}
+		.mobile {
+			font-size: 14px;
+		}
+		.map {
+			height: 548px;
+			background: url(../res/map.png) no-repeat;
+			background-size: cover;
+			margin-bottom: 115px;
+			margin-top: 150px;
+		}
+		.message-panel {
+			width: 1001px;
+			margin: 0 auto;
+		}
+		.cell {
+			display: flex;
+			margin-bottom: 15px;
+		}
+		.cell input, .cell textarea {
+			height: 42px;
+			line-height: 42px;
+			padding: 0 10px;
+			width: 470px;
+			border: 0 solid #dadada;
+			margin-right: 10px;
+			background-color: #f3f5f7;
+		}
+		.cell textarea {
+			height: 125px;
+			width: 100%;
+		}
+		.valid-box {
+			display: flex;
+		}
+		.valid-box input {
+			width: 290px;
+		}
+		.change-code {
+			line-height: 42px;
+			display: block;
+			margin-left: 10px;
+		}
+		.form-title {
+			font-size: 40px;
+			letter-spacing: 3px;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+		.title-tip {
+			font-size: 18px;
+			margin-bottom: 50px;
+			text-align: center;
+		}
+		.call-page button {
+			width: 227px;
+			background-color: #604d3f;
+			border: 1px solid #604d3f;
+			color: #fff;
+			padding: 10px 10px;
+			margin-top: 15px;
+		}	
+		.button-box {
+			display: flex;
+			justify-content: flex-end;
+		}	
 	</style>
 </head>
 <body>
 <script src="http://localhost:8080/bundle.js"></script>
 <div id="header"></div>
 <div class="page call-page">
-	<div class="bar">
-		<div class="inner">
-			<span>当前位置: </span>
-			<a href="">首页></a>
-			<a href="">业务领域></a>
-			<span id="foldSelect">润兴溯源</span>
+	<div class="bar-box">
+		<div class="bar">
+			<div class="bar-menu">
+				裕丰担保
+			</div>
+			<div class="inner">
+				<span class="index-icon"></span>
+				<span class="item"> 当前位置: </span>
+				<a href="" class="item"> 首页 ></a>
+				<a href="" class="item"> 公司简介</a>
+			</div>
 		</div>
 	</div>
 	<div class="content clearfix">
-		<div class="menu-panel link-menu">
-			<ul class="menu" id="menuList">
-				<li><a href="">首页</a></li>
-				<li><a href="">走进润兴</a></li>
-				<li><a href="">下属企业</a></li>
-				<li><a href="">业务领域</a></li>
-				<li><a href="">新闻资讯</a></li>
-				<li><a href="">公司文化</a></li>
-				<li><a href="">加入我们</a></li>
-				<li class="active"><a href="">联系我们</a></li>
-			</ul>
+		<div class="content-inner">
+			<div class="content-left">
+				<h2 class="name">浙江裕沣担保有限公司</h2>
+				<p class="pinyin">ZheJiang YuFeng Guarantee Co., Ltd.</p>
+				<p class="word">公司总部：杭州市上城区白云路16号</p>
+				<p class="word">电话：0571-87250598</p>
+				<p class="word">邮箱：zjyfdb@163.com</p>	
+				<p class="part-name">诉讼保全担保业务部</p>
+				<p class="word">电话： 0571-8605511</p>		
+			</div>
+			<div class="content-right">
+				<div class="section">
+					<div class="name">
+						湖州办事处
+					</div>
+					<div class="mobile">
+						电话：0572-2122503
+					</div>
+				</div>
+				<div class="section">
+					<div class="name">
+						临海办事处
+					</div>
+					<div class="mobile">
+						电话：0576-85381837
+					</div>
+				</div>
+				<div class="section">
+					<div class="name">
+						三门办事处
+					</div>
+					<div class="mobile">
+						手机：13906550972
+					</div>
+				</div>
+				<div class="section">
+					<div class="name">
+						温州地区办事处
+					</div>
+					<div class="mobile">
+						手机：
+					</div>
+				</div>
+				<div class="section">
+					<div class="name">
+						乐清办事处
+					</div>
+					<div class="mobile">
+						电话：0577-62719016
+					</div>
+				</div>
+				<div class="section">
+					<div class="name">
+						瑞安办事处
+					</div>
+					<div class="mobile">
+						电话：0577-65639708
+					</div>
+				</div>
+				<div class="section">
+					<div class="name">
+						永嘉办事处
+					</div>
+					<div class="mobile">
+						电话：0577-65639708
+					</div>
+				</div>
+				<div class="section">
+					<div class="name">
+						平阳办事处
+					</div>
+					<div class="mobile">
+						电话：0577-63710665
+					</div>
+				</div>
+				<div class="section">
+					<div class="name">
+						苍南办事处
+					</div>
+					<div class="mobile">
+						手机：13706601561
+					</div>
+				</div>
+				<div class="section">
+					<div class="name">
+						泰顺办事处
+					</div>
+					<div class="mobile">
+						手机：
+					</div>
+				</div>
+			</div>
+			
 		</div>
-		<div class="articl-panel">
-			<div id="callForm"></div>
-		</div>		
-	</div>
 
+		<div class="map">
+			
+		</div>
+		<div class="message-panel">
+			<h2 class="form-title">MESSAGE</h2>
+			<p class="title-tip">给我们留言</p>
+			<div class="cell">
+				<div>
+					<input type="text" name="" placeholder="姓名">
+				</div>
+				<div>
+					<input type="text" name="" placeholder="电话">
+				</div>
+				
+			</div>
+			<div class="cell">
+				<div>
+					<input type="text" name="" placeholder="邮箱">
+				</div>
+				<div class="valid-box">
+					<input type="text" name="" placeholder="验证码">
+					<img src="../res/valid-code.png" alt="" width="110" height="40">
+					<span class="change-code">换一张？</span>
+				</div>
+			</div>
+			<div class="cell">
+				<textarea placeholder="内容"></textarea>
+			</div>
+			<div class="button-box">
+				<button class="button"> 
+					提交
+				</button>
+			</div>
+		</div>
+	</div>
 </div>
 <div id="footer"></div>
 <script type="text/javascript" src="../js/index.js"></script>
-<script type="text/javascript">
-	$('#callForm').load('../html/call-tpl.html')
-</script>
 </body>
 </html>

@@ -81,6 +81,7 @@ body{
 .header .bg {
 	background: url(../res/bg.jpg) top center no-repeat;
 	height: 760px;
+	background-size: cover;
 }
 
 /*标题*/
