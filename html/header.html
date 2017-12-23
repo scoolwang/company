@@ -1,16 +1,38 @@
 <div class="header">
 	<!-- 导航 -->
 	<div class="nav-wrap">
-		<div class="log"></div>
-		<div class="nav-inner">
+		<div class="nav-inner" id="headerNavList">
+			<div class="log"></div>
 			<ul class="nav">
 				<li><a href="./index.html">首页</a></li>
-				<li><a href="./company.html">走进润兴</a></li>
-				<li><a href="">下属企业</a></li>
-				<li><a href="./business.html">业务领域</a></li>
-				<li><a href="./news.html">新闻资讯</a></li>
-				<li><a href="">公司文化</a></li>
-				<li><a href="./join.html">加入我们</a></li>
+				<li>
+					<a href="./company.html">公司简介</a>
+					<!-- <div class="menu">
+						<a class="menu-item" href="./company.html#articl1">裕丰溯源</a>
+						<a class="menu-item" href="./company.html#articl2">关于裕丰</a>
+						<a class="menu-item" href="./company.html#articl3">领导人介绍</a>
+						<a class="menu-item" href="./company.html#articl4">组织架构</a>
+						<a class="menu-item" href="./company.html#articl5">裕丰优势</a>
+					</div> -->					
+				</li>
+				<li><a href="./service.html">服务领域</a></li>
+				<li>
+					<a href="./aboutCompany.html">关联企业</a>
+					<!-- <div class="menu">
+						<a class="menu-item" href="./business.html#articl1">公司理念</a>
+						<a class="menu-item" href="./business.html#articl2">公司理念</a>
+						<a class="menu-item" href="./business.html#articl3">公司案例</a>
+					</div> -->
+				</li>
+				<li>
+					<a href="./news.html">新闻资讯</a>
+					<!-- <div class="menu">
+						<a class="menu-item" href="./news.html#articl1">裕丰新闻</a>
+						<a class="menu-item" href="./news.html#articl2">经济金融动态</a>
+					</div> -->
+				</li>
+				<!-- <li><a href="">公司文化</a></li>
+				<li><a href="./join.html">加入我们</a></li> -->
 				<li><a href="./call.html">联系我们</a></li>
 			</ul>
 		</div>	
@@ -19,3 +41,19 @@
 	<!-- 背景图 -->
 	<div class="bg"></div>
 </div>
+<script>
+
+$(document).ready(function() {
+	var hash = location.hash
+	if (hash) {
+		hash = hash.substring(1)
+	}
+	$('#headerNavList .menu-item').click(function() {
+		location.reload()
+	})	
+	if ($('#menuList li[aid="'+hash+'"]')[0]) {
+
+		$('#menuList li[aid="'+hash+'"]').click()
+	}
+})
+</script>

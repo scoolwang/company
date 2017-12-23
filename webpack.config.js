@@ -13,6 +13,11 @@ module.exports = {
     plugins: [
       new htmlWebpackPlugin({
         title: 'My App',
+        filename: 'index.html',
+        template: './html/index.html'
+      }),
+      new htmlWebpackPlugin({
+        title: 'My App',
         filename: 'artical.html',
         template: './html/artical.html'
       }),
@@ -38,18 +43,18 @@ module.exports = {
       }),
       new htmlWebpackPlugin({
         title: 'My App',
-        filename: 'index.html',
-        template: './html/index.html'
-      }),
-      new htmlWebpackPlugin({
-        title: 'My App',
-        filename: 'index.html',
-        template: './html/call.html'
-      }),
-      new htmlWebpackPlugin({
-        title: 'My App',
         filename: 'join.html',
         template: './html/join.html'
+      }),
+      new htmlWebpackPlugin({
+        title: 'My App',
+        filename: 'service.html',
+        template: './html/service.html'
+      }),
+      new htmlWebpackPlugin({
+        title: 'My App',
+        filename: 'aboutCompany.html',
+        template: './html/aboutCompany.html'
       })
     ]
 };

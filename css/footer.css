@@ -1,28 +1,28 @@
 .footer {
-	height: 157px;
-	background: #464646;
-	padding-top: 30px;
+	height: 315px;
+	background: #322823;
+	padding-top: 50px;
 	padding-bottom: 15px;
 	text-align: center;
 	box-sizing: border-box;
 }
 .footer .nav {
 	display: inline-block;
-	margin: 0 auto;
+	margin: 40px auto;
 }
 .footer .nav li {
 	display: inline-block;
-	color: #fff;
-	padding: 0 10px;
+	color: #a58d7c;
+	padding: 0 30px;
 }
 .footer .nav li a {
-	color: #fff;
+	color: #a58d7c;
+	font-size: 16px;
 }
 .footer .copy {
-	padding-top: 25px;
 	line-height: 25px;
 	font-size: 14px;
 }
 .footer .copy p {
-	color: #c0a587;
+	color: #a58d7c;
 }
