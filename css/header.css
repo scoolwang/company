@@ -47,6 +47,7 @@ body{
 }
 .header .nav li a {
 	color: #c0a587;
+	font-size: 16px;
 }
 .header .nav li .menu {
     position: absolute;
