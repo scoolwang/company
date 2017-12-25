@@ -5,7 +5,7 @@ body,html,p,div,ul,li {
 	color: #333;
 }
 body {
-    min-width: 1330px	
+    min-width: 1330px;
 }
 p,ul,h1,h2,h3,h4,h5,input{padding: 0;margin:0;}
 li{list-style: none;}
