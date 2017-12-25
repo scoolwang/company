@@ -380,7 +380,7 @@
 	</style>
 </head>
 <body>
-<script src="http://localhost:8080/bundle.js"></script>
+ 
 <div id="header" class="index-header"></div>
 <div class="index">
 	<!-- 公司介绍 -->
@@ -569,13 +569,6 @@
 <script type="text/javascript" src="../js/index.js"></script>
 <script type="text/javascript">
 	$('#callForm').load('../html/call-tpl.html')
-	$('#switchMenu li').hover(function () {
-		var index = $('#switchMenu li').index($(this))
-		$('#switchMenu .active').removeClass('active')
-		$(this).addClass('active')
-		$('#contentTxt .active').removeClass('active')
-		$('#contentTxt .box' + (index+1)).addClass('active')
-	})
 </script>
 </body>
 </html>
