@@ -375,6 +375,9 @@
 			background: url(../res/bg.jpg) no-repeat;
 			background-size: cover;
 		}
+		.fixed-window {
+			position: fixed;
+		}
 		/***************/
 		video {
 			width: 100%;
@@ -471,7 +474,7 @@
 				<p class="icon-txt">工程履约担保</p></li>
 		</ul>
 		<a class="link-more" href="">更多+</a>
-		<div class="window">
+		<div class="window" id="windowMenu">
 			<div class="code-img">
 				<img src="../res/code.png" alt="">
 			</div>
@@ -571,6 +574,14 @@
 <script type="text/javascript" src="../js/index.js"></script>
 <script type="text/javascript">
 	$('#callForm').load('../html/call-tpl.html')
+	$(document).scroll(function () {
+		var top = $(document).scrollTop()
+		if (top > 902) {
+			$('#windowMenu').addClass('fixed-window')
+		} else {
+			$('#windowMenu').removeClass('fixed-window')
+		}
+	})
 </script>
 </body>
 </html>
