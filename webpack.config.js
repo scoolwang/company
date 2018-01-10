@@ -55,6 +55,11 @@ module.exports = {
         title: 'My App',
         filename: 'aboutCompany.html',
         template: './html/aboutCompany.html'
+      }),
+      new htmlWebpackPlugin({
+        title: 'My App',
+        filename: 'newsDetail.html',
+        template: './html/newsDetail.html'
       })
     ]
 };
