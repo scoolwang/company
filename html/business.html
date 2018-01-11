@@ -1,75 +1,344 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>业务领域</title>
+	<title>主营业务</title>
 	<link rel="stylesheet" type="text/css" href="../css/header.css">
 	<link rel="stylesheet" type="text/css" href="../css/footer.css">
 	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/rollSlide.js"></script>
+	<style type="text/css">
+		.content {
+			padding: 100px 0;
+		}
+		.content-inner, .menu-inner {
+			width: 1330px;
+			margin: 0 auto;
+		}
+
+		.cover, .cover-img {
+			width: 437px;
+			height: 539px;
+			position: relative;
+		}
+		.cover {
+			border: 1px solid rgba(53, 44, 39, 0.3);
+			margin-top: 30px;
+			margin-left: 30px;
+		}
+		.cover-img {
+			top: -30px;
+			left: -30px;	
+			opacity: 0.8;		
+		}
+		.module {
+			display: flex;
+		}
+		.title {
+			font-size: 44px;
+			color: #604d3f;
+			margin-bottom: 50px;
+			margin-top: 50px;
+		}
+		.desc-title {
+			font-size: 20px;
+			margin-bottom: 25px;
+		}
+		.desc-panel {
+			font-size: 14px;
+			line-height: 25px;
+		}
+		.second-title {
+			margin-bottom: 15px;
+		}
+		.section {
+			margin-bottom: 15px;
+		}
+		.desc {
+			padding-left: 100px;
+		}
+		.roll-wrap {
+			position: relative;
+			padding-right: 30px;
+	    width: 100%;
+	    height: 95px;
+	    overflow: hidden;			
+		}
+		.roll_row .roll__list {
+		    width: 9999px;
+		    margin: 0 30px;
+		}		
+		.roll_row .roll__list li {
+	    float: left;
+	    display: block;
+	    height: 95px;
+	    width: 270px;
+	    font-size: 15px;
+	    line-height: 95px;
+	    text-align: center;
+	    border-left: 1px solid #e1e1e1;
+		}
+		.control {
+		    position: absolute;
+		    height: 95px;
+		    padding: 0px 5px;
+		    color: #000;
+		    opacity: 0.7;
+		    background: url(../res/arrow.png) no-repeat center center;
+		}	
+		.control.pre {
+		  left: 0px;
+		  transform: rotate(180deg)
+		}
+		.control.next {
+			right: 0px;
+		}
+		.menu {
+			margin-top: 135px;
+			border: 1px solid #e1e1e1;
+			border-left: none;
+			border-right: none;
+		}	
+		.roll_row .roll__list li.active {
+			background: #d6a966;
+			color: #fff;
+		}	
+		.module {
+			display: none;
+		}
+		.module.active-module {
+			display: flex;
+		}
+	</style>
 </head>
 <body>
  
 <div id="header"></div>
-<div class="page company-page">
-	<div class="bar">
-		<div class="inner">
-			<span>当前位置: </span>
-			<a href="">首页></a>
-			<a href="">业务领域></a>
-			<span id="foldSelect">润兴溯源</span>
+<div class="page business-page">
+	<div class="bar-box">
+		<div class="bar">
+			<div class="bar-menu">
+				裕丰担保
+			</div>
+			<div class="inner">
+				<span class="index-icon"></span>
+				<span class="item"> 当前位置: </span>
+				<a href="" class="item"> 首页 ></a>
+				<a href="" class="item"> 主营业务</a>
+			</div>
 		</div>
 	</div>
 	<div class="content clearfix">
-		<div class="menu-panel">
-			<div class="title">业务领域</div>
-			<ul class="menu" id="menuList">
-				<li class="active" aid="articl1"><a href="#articl1">裕丰理念</a></li>
-				<li aid="articl2"><a href="#articl2">裕丰业务</a></li>
-				<li aid="articl3"><a href="#articl3">裕丰案例</a></li>
-			</ul>
+		<div class="content-inner" id="moduleBox">
+			<div class="module active-module">
+				<div class="cover">
+					<img src="../res/sbg-1.png" alt="" class="cover-img">
+				</div>
+				<div class="desc">
+					<div class="title">
+						主营业务
+					</div>
+					<div class="desc-inner">
+						<div class="desc-title">
+							农贷卡分期担保业务1
+						</div>
+						<ul class="desc-panel">
+							<li class="section">
+								<p class="second-title">一、家装分期担保</p>
+								<div>
+									<p>家装分期担保是为省内有房屋装修需求的客户推出的信用卡装分期产品，家装分期免利息、只需收取一定的手续费，普通住宅、别墅的装修都可以申请。家装分期最高借款额度为50万元、最长分期年限为60期（5年）.</p>
+									<p>要求借款申请人提供：</p>
+									<p>身份证明、房产证明、收入证明、房屋装修合同</p>
+								</div>
+							</li>
+							<li class="section">
+								<p class="second-title">二、汽车分期担保</p>
+								<div>
+									<p>汽车分期担保是为省内有购车需求的客户以推出的信用卡分期产品。汽车分期免利息、只需收取一定的手续费，购买新车、二手车都可以申请，所购车辆需抵押给银行。汽车分期最高额度为100万元，最长年限为60期（5年）。</p>
+									<p>要求借款申请人提供：</p>
+									<p>身份证明、资产证明、收入证明、汽车购销合同、汽车销售发票、车辆登记证书</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			<div class="module">
+				<div class="cover">
+					<img src="../res/sbg-1.png" alt="" class="cover-img">
+				</div>
+				<div class="desc">
+					<div class="title">
+						主营业务
+					</div>
+					<div class="desc-inner">
+						<div class="desc-title">
+							农贷卡分期担保业务2
+						</div>
+						<ul class="desc-panel">
+							<li class="section">
+								<p class="second-title">一、家装分期担保</p>
+								<div>
+									<p>家装分期担保是为省内有房屋装修需求的客户推出的信用卡装分期产品，家装分期免利息、只需收取一定的手续费，普通住宅、别墅的装修都可以申请。家装分期最高借款额度为50万元、最长分期年限为60期（5年）.</p>
+									<p>要求借款申请人提供：</p>
+									<p>身份证明、房产证明、收入证明、房屋装修合同</p>
+								</div>
+							</li>
+							<li class="section">
+								<p class="second-title">二、汽车分期担保</p>
+								<div>
+									<p>汽车分期担保是为省内有购车需求的客户以推出的信用卡分期产品。汽车分期免利息、只需收取一定的手续费，购买新车、二手车都可以申请，所购车辆需抵押给银行。汽车分期最高额度为100万元，最长年限为60期（5年）。</p>
+									<p>要求借款申请人提供：</p>
+									<p>身份证明、资产证明、收入证明、汽车购销合同、汽车销售发票、车辆登记证书</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			<div class="module">
+				<div class="cover">
+					<img src="../res/sbg-1.png" alt="" class="cover-img">
+				</div>
+				<div class="desc">
+					<div class="title">
+						主营业务
+					</div>
+					<div class="desc-inner">
+						<div class="desc-title">
+							农贷卡分期担保业务3
+						</div>
+						<ul class="desc-panel">
+							<li class="section">
+								<p class="second-title">一、家装分期担保</p>
+								<div>
+									<p>家装分期担保是为省内有房屋装修需求的客户推出的信用卡装分期产品，家装分期免利息、只需收取一定的手续费，普通住宅、别墅的装修都可以申请。家装分期最高借款额度为50万元、最长分期年限为60期（5年）.</p>
+									<p>要求借款申请人提供：</p>
+									<p>身份证明、房产证明、收入证明、房屋装修合同</p>
+								</div>
+							</li>
+							<li class="section">
+								<p class="second-title">二、汽车分期担保</p>
+								<div>
+									<p>汽车分期担保是为省内有购车需求的客户以推出的信用卡分期产品。汽车分期免利息、只需收取一定的手续费，购买新车、二手车都可以申请，所购车辆需抵押给银行。汽车分期最高额度为100万元，最长年限为60期（5年）。</p>
+									<p>要求借款申请人提供：</p>
+									<p>身份证明、资产证明、收入证明、汽车购销合同、汽车销售发票、车辆登记证书</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			<div class="module">
+				<div class="cover">
+					<img src="../res/sbg-1.png" alt="" class="cover-img">
+				</div>
+				<div class="desc">
+					<div class="title">
+						主营业务
+					</div>
+					<div class="desc-inner">
+						<div class="desc-title">
+							农贷卡分期担保业务4
+						</div>
+						<ul class="desc-panel">
+							<li class="section">
+								<p class="second-title">一、家装分期担保</p>
+								<div>
+									<p>家装分期担保是为省内有房屋装修需求的客户推出的信用卡装分期产品，家装分期免利息、只需收取一定的手续费，普通住宅、别墅的装修都可以申请。家装分期最高借款额度为50万元、最长分期年限为60期（5年）.</p>
+									<p>要求借款申请人提供：</p>
+									<p>身份证明、房产证明、收入证明、房屋装修合同</p>
+								</div>
+							</li>
+							<li class="section">
+								<p class="second-title">二、汽车分期担保</p>
+								<div>
+									<p>汽车分期担保是为省内有购车需求的客户以推出的信用卡分期产品。汽车分期免利息、只需收取一定的手续费，购买新车、二手车都可以申请，所购车辆需抵押给银行。汽车分期最高额度为100万元，最长年限为60期（5年）。</p>
+									<p>要求借款申请人提供：</p>
+									<p>身份证明、资产证明、收入证明、汽车购销合同、汽车销售发票、车辆登记证书</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			<div class="module">
+				<div class="cover">
+					<img src="../res/sbg-1.png" alt="" class="cover-img">
+				</div>
+				<div class="desc">
+					<div class="title">
+						主营业务
+					</div>
+					<div class="desc-inner">
+						<div class="desc-title">
+							农贷卡分期担保业务5
+						</div>
+						<ul class="desc-panel">
+							<li class="section">
+								<p class="second-title">一、家装分期担保</p>
+								<div>
+									<p>家装分期担保是为省内有房屋装修需求的客户推出的信用卡装分期产品，家装分期免利息、只需收取一定的手续费，普通住宅、别墅的装修都可以申请。家装分期最高借款额度为50万元、最长分期年限为60期（5年）.</p>
+									<p>要求借款申请人提供：</p>
+									<p>身份证明、房产证明、收入证明、房屋装修合同</p>
+								</div>
+							</li>
+							<li class="section">
+								<p class="second-title">二、汽车分期担保</p>
+								<div>
+									<p>汽车分期担保是为省内有购车需求的客户以推出的信用卡分期产品。汽车分期免利息、只需收取一定的手续费，购买新车、二手车都可以申请，所购车辆需抵押给银行。汽车分期最高额度为100万元，最长年限为60期（5年）。</p>
+									<p>要求借款申请人提供：</p>
+									<p>身份证明、资产证明、收入证明、汽车购销合同、汽车销售发票、车辆登记证书</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
 		</div>
-		<div class="articl-panel">
-			<div class="articl active" id="articl1">
-				<h2 class="title module-title">{裕丰<span>理念</span>}</h2>
-				<div>
-					<h3>集团简介</h3>			
-					<p>中植企业集团有限公司创建于1995年，集团总部位于北京市，集团拥有中融信托、中植资本等30多家全资、控股子公司，目前拥有员工近10000人，资产管理达万亿规模，集团持股40余家上市公司：中南重工、兴业矿业、上海电气、江西长运、TCL集团、贵绳股份、吉恩镍业、福田汽车、三安光电等，是中国最大的民营控股集团之一。</p>
-					<h3>集团简介</h3>			
-					<p>中植企业集团有限公司创建于1995年，集团总部位于北京市，集团拥有中融信托、中植资本等30多家全资、控股子公司，目前拥有员工近10000人，资产管理达万亿规模，集团持股40余家上市公司：中南重工、兴业矿业、上海电气、江西长运、TCL集团、贵绳股份、吉恩镍业、福田汽车、三安光电等，是中国最大的民营控股集团之一。</p>				
-				</div>				
+		<div class="menu">
+			<div class="menu-inner">
+				<div class="roll-wrap roll_row" id="pageMenu">
+						<div>
+			        <ul class="roll__list" id="menuList" style="position: absolute; left: 0; top: 0;">
+			            <li idx="0" class="active">小额农户贷款担保业务</li>
+			            <li idx="1">诉讼保全担保</li>
+			            <li idx="2">公司贷款担保业务</li>
+			            <li idx="3">农贷卡分期担保业务</li>
+			            <li idx="4">工程履约保函业务</li>
+			        </ul>							
+						</div>
+
+		        <a class="control pre" href="javascript:;"></a>
+		        <a class="control next" href="javascript:;"></a>
+		    </div>				
 			</div>
-			<div class="articl" id="articl2">
-				<h2 class="title module-title">{裕丰<span>业务</span>}</h2>
-				<div>
-					<h3>集团简介</h3>			
-					<p>中植企业集团有限公司创建于1995年，集团总部位于北京市，集团拥有中融信托、中植资本等30多家全资、控股子公司，目前拥有员工近10000人，资产管理达万亿规模，集团持股40余家上市公司：中南重工、兴业矿业、上海电气、江西长运、TCL集团、贵绳股份、吉恩镍业、福田汽车、三安光电等，是中国最大的民营控股集团之一。</p>
-					<h3>集团简介</h3>			
-					<p>中植企业集团有限公司创建于1995年，集团总部位于北京市，集团拥有中融信托、中植资本等30多家全资、控股子公司，目前拥有员工近10000人，资产管理达万亿规模，集团持股40余家上市公司：中南重工、兴业矿业、上海电气、江西长运、TCL集团、贵绳股份、吉恩镍业、福田汽车、三安光电等，是中国最大的民营控股集团之一。</p>				
-				</div>				
-			</div>
-			<div class="articl" id="articl3">
-				<h2 class="title module-title">{裕丰<span>案例</span>}</h2>
-				<div>
-					<h3>集团简介</h3>			
-					<p>中植企业集团有限公司创建于1995年，集团总部位于北京市，集团拥有中融信托、中植资本等30多家全资、控股子公司，目前拥有员工近10000人，资产管理达万亿规模，集团持股40余家上市公司：中南重工、兴业矿业、上海电气、江西长运、TCL集团、贵绳股份、吉恩镍业、福田汽车、三安光电等，是中国最大的民营控股集团之一。</p>
-					<h3>集团简介</h3>			
-					<p>中植企业集团有限公司创建于1995年，集团总部位于北京市，集团拥有中融信托、中植资本等30多家全资、控股子公司，目前拥有员工近10000人，资产管理达万亿规模，集团持股40余家上市公司：中南重工、兴业矿业、上海电气、江西长运、TCL集团、贵绳股份、吉恩镍业、福田汽车、三安光电等，是中国最大的民营控股集团之一。</p>				
-				</div>				
-			</div>
+	
 		</div>		
 	</div>
 
 </div>
 <div id="footer"></div>
 <script type="text/javascript" src="../js/index.js"></script>
-<script type="text/javascript">
-	$('#menuList li').click(function(event){
-		$('#menuList li').removeClass('active')
-		$(this).addClass('active')
-		$('#foldSelect').text($(this).text())
-		$('.articl').removeClass('active')
-		$('#'+$(this).attr('aid')).addClass('active')
-		console.log($(event.currentTarget).eq(0).attr('aid'))
-	})
+<script>
+    $('#pageMenu').rollSlide({
+        orientation: 'left',
+        num: 1,
+        v: 1000,
+        space: 3000,
+        isRoll: false
+    })
+    $('#menuList').click(function () {
+    	var index = $(event.srcElement).attr('idx')
+    	$('#pageMenu .active').removeClass('active')
+    	$(event.srcElement).addClass('active')
+    	$('#moduleBox .active-module').removeClass('active-module')
+    	$('#moduleBox .module').eq(index).addClass('active-module')
+    })
 </script>
 </body>
 </html>
