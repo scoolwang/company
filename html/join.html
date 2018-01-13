@@ -156,14 +156,20 @@
 		.form-botton .button {
 			margin: 0 10px;
 		}
+		.join-wrap .bg {
+			background: url(../res/zhaoping-bg.jpg) no-repeat center;
+		}
+		#fileupload {
+			display: none;
+		}
 	</style>
 </head>
 <body>
  
-<div id="header"></div>
+<div id="header" class="join-wrap"></div>
 <div class="join-page">
 	<div class="content">
-		<div class="aside" id="aside">
+		<form class="aside" id="aside">
 			<div class="hd">
 				<span class="part-name" id="partName">销售主管</span>
 				<span class="time">发布日期：2017-10-1</span>
@@ -294,12 +300,13 @@
 					</div>
 				</div>
 				<div class="form-botton">
-					<button class="button">立即提交</button>
-					<button class="button upload-button">上传简历</button>
+					<button type="submit" class="button">立即提交</button>
+					<button class="button upload-button" id="upload">上传简历</button>
+					<input id="fileupload" type="file" name="files">
 				</div>
 			</div>
 
-		</div>
+		</form>
 		<div class="menu">
 			<div class="menu-hd">
 				<span class="part-name">其他岗位</span>
@@ -332,6 +339,15 @@
 		$('#form').addClass('show')
 		$('#descContent').removeClass('show')
 	})
+
+	function upload() {
+	 	$('#fileupload').click()
+	}
+	function load () {}
+	$('#upload').click(function () {
+		upload()
+	})
+	
 </script>
 </body>
 </html>

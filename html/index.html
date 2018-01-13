@@ -228,6 +228,12 @@
 			height: 720px;
 			margin: 0 auto;
 		}	
+		.part2 .sec {
+			display: none;
+		}
+		.part2 .sec.active {
+			display: block;
+		}
 		.sec-circle {
 			width: 30px;
 			height: 30px;
@@ -256,6 +262,12 @@
 			color: #604c3f;
 			font-weight: bold;
 			margin-bottom: 50px;
+		}
+		.main-title a {
+			color: #604c3f;
+		}
+		.main-title a:hover, .main-title a:visited, .main-title:active {
+			color: #604c3f;
 		}
 		.sec-line {
 			width: 68px;
@@ -314,7 +326,8 @@
 			right: 65px;
 			top: 50px;	
 			display: flex;
-			align-items: flex-end;		
+			align-items: flex-end;
+			z-index: 1;		
 		}
 		.window-menu-item {
 			width: 62px;
@@ -336,9 +349,15 @@
 		.arrow-icon {
 			height: 15px;
 		}
+		.window-menu {
+			position: relative;
+		}
 		.code-img {
 			padding: 20px;
 			background-color: #a3a2a0;
+			position: absolute;
+			right: 64px;
+			bottom: 0;
 		}
 		.window-icon {
 
@@ -378,6 +397,43 @@
 		.fixed-window {
 			position: fixed;
 		}
+		.hover-box {
+			position: absolute;
+			right: 64px;
+			background: #a3a2a0;
+			color: #fff;
+			display: none;
+		}
+		.zhaopin {
+			top: 2px;
+			width: 437px;
+			height: 263px;
+			overflow-y: auto;
+			padding: 30px;
+			box-sizing: border-box;
+		}
+		.zhaopin p,  .call-box p{
+			font-size: 14px;
+			color: #fff;
+			line-height: 25px;
+		}
+		.call-box {
+			width: 210px;
+			padding: 30px;
+			top: 2px;
+			box-sizing: border-box;
+		}
+		.call-box p {
+			letter-spacing: 2px;
+		}
+		.call-box .first-call-sec {
+			padding-bottom: 13px;
+			margin-bottom: 13px;
+			border-bottom: 1px solid #fff;
+		}
+		.window-menu-item:hover .hover-box {
+			display: block;
+		}
 		/***************/
 		video {
 			width: 100%;
@@ -388,70 +444,6 @@
  
 <div id="header" class="index-header"></div>
 <div class="index">
-	<!-- 公司介绍 -->
-	<!-- <div class="intro-panel">
-		<h2 class="title">{<span class="strong-txt">公司</span><span class="txt">介绍</span>}</h2>
-		<div class="content">
-			<div class="img-box">
-			</div>
-			<div class="txt-box">
-				<h3>缓解企业融资难、融资贵问题</h3>
-				<p>浙江裕沣担保有限公司成立于2010月2月，注册资本金3亿元人民币，公司总部设在杭州，内设行政部、财务部、风险处置部、事业部、市场部、稽核部，在全省15个地县市区设有分公司（办事处），另有3个控股企业：平阳县中小企业融资担保有限公司，杭州中颐信资产管理公司、杭州中小企业融资租赁公司</p>
-				<p>近年来，浙江裕沣担保有限公司在各级政府及有关部门的重视关心下，在农行等金融机构的大力支持下，依靠上下同心协力，坚持不懈努力，得到了稳步发展。公司连续4年被评为杭州市先进信用担保机构、A级信用企业。</p>
-				<a class="button">更多+</a>
-			</div>				
-		</div>
-	</div> -->
-
-
-	<!-- 视频播放 -->
-	<!-- <div class="vido-panel">
-		<video src="http://183.134.9.47/11184545.s21d-11.faiusrd.com/58/ABUIABA6GAAg8dzbwwUo4a2BjAQ.mp4?wsiphost=local" poster="../res/video-bg.jpg" controls="controls">
-		</video>
-	</div> -->
-
-	<!-- 公司优势 -->
-	<!-- <div class="advantage-panel">
-		<div class="menu-box">
-			<h2 class="title">{<span class="strong-txt">公司</span><span class="txt">优势</span>}</h2>
-			<ul class="menu-list" id="switchMenu">
-				<li class="active">
-					<div class="txt-bg">经营模式日趋完善</div>
-					<div class="cover-bg"></div>
-				</li>
-				<li>
-					<div class="txt-bg">经营理念与时俱进</div>
-					<div class="cover-bg"></div>
-				</li>
-				<li>
-					<div class="txt-bg">经营网络稳健拓展</div>
-					<div class="cover-bg"></div>
-				</li>
-				<li>
-					<div class="txt-bg">经营产品不断开拓</div>
-					<div class="cover-bg"></div>
-				</li>
-				<li>
-					<div class="txt-bg">风控管理逐步强化</div>
-					<div class="cover-bg"></div>
-				</li>
-			</ul>
-		</div>
-		<div class="content-box">
-			<div class="cover-txt" id="contentTxt">
-				<div class="content box1 active">
-					<p>这几年裕沣公司在确保业务稳定健康发展的前提下，经营网络也有了很大的拓展。最初我们仅杭州、绍兴、温州三个地级市设有分公司，现在在全省范围内具备条件的地区构建了比较健全的经营网络。已在杭州、温州市、湖州、嘉兴、绍兴、丽水、建德、新昌、嵊州、温岭、临海、三门、天台、乐清、柳市、白象、永嘉、瑞安、平阳、苍南、瑞安等地区设立了办事处或联络点</p>
-				</div>
-				<div class="content box2">
-					<p>box2</p>
-				</div>
-				<div class="content box3">
-					<p>box3</p>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
 	<!-- 主营业务 -->
 	<div class="business-panel">
 		<h2 class="title">
@@ -493,21 +485,41 @@
 		</ul>
 		<a class="link-more" href="./business.html#0">更多+</a>
 		<div class="window" id="windowMenu">
-			<div class="code-img">
-				<img src="../res/code.png" alt="">
-			</div>
 			<div class="window-menu">
 				<div class="window-menu-item">
 					<span class="call-icon window-icon"></span>
+					<div class="hover-box call-box">
+						<div class="call-sec first-call-sec">
+							<p>联系电话</p>
+							<p>0571-87250578</p>
+						</div>
+						<div  class="call-sec">
+							<p>联系邮箱</p>
+							<p>zjyfdb@163.com</p>
+						</div>
+					</div>					
 				</div>
 				<div class="window-menu-item">
 					<span class="user-icon window-icon"></span>
+					<div class="hover-box zhaopin">
+						<p>岗位名称：销售主管</p>
+						<p>招聘人数: 若干</p>
+						<p>工作地点:杭州 </p>
+						<p>岗位职责：</p>
+						<p>1、企划全年市场推广活动及实施；</p>
+						<p>2、年度各级别车展展具设计、互动体验、站点安排、</p>
+						<p>3、审核特约店申报的各级车展整体方案、站点安排、</p>
+						<p>4、协调市场推广活动、车展现场各方面的工作及</p>
+					</div>
 				</div>
 				<div class="window-menu-item">
 					<span class="code-icon window-icon"></span>
+					<div class="code-img hover-box">
+						<img src="../res/code.png" alt="">
+					</div>	
 				</div>
-				<div class="window-menu-item">
-					<span class="arrow-icon window-icon"></span>
+				<div class="window-menu-item" id="scrollTop">
+					<span class="arrow-icon window-icon"></span>				
 				</div>
 			</div>
 		</div>
@@ -523,7 +535,7 @@
 			</div>
 			<div class="main-right">
 				<div class="part1 part">
-					<p class="main-title">农贷担保业务</p>
+					<p class="main-title"><a  href="./business.html#0" title="">农贷担保业务</a></p>
 					<div class="sec">
 						<div class="sec-number">
 							<div class="sec-circle">1</div>
@@ -551,15 +563,15 @@
 						</div>					
 					</div>
 				</div>
-				<div class="part2 part">
-					<p class="main-title">诉讼财产保全担保业务</p>
+				<div class="part2 part" id="part2">
+					<p class="main-title"><a  href="./business.html#1" title="">诉讼财产保全担保业务</a></p>
 					<div class="main-menu">
-						<ul>
+						<ul id="switchMenu">
 							<li class="main-item main-active ">快捷服务流程（2小时出保函）</li>
 							<li class="main-item">普通服务流程</li>
 						</ul>
 					</div>
-					<div class="sec">
+					<div class="sec active">
 						<div class="sec-number" style="margin-left: 24px;">
 							<div class="sec-circle">1</div>
 							<div class="sec-line"></div>
@@ -577,6 +589,26 @@
 							<span class="sec-txt" style="margin-right: 68px;">审核资料</span>			
 							<span class="sec-txt" style="margin-right: 66px;">支付保费</span>			
 							<span class="sec-txt">出具保函</span>	
+						</div>					
+					</div>
+					<div class="sec">
+						<div class="sec-number" style="margin-left: 24px;">
+							<div class="sec-circle">1</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">2</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">3</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">4</div>
+							<div class="sec-line"></div>
+							<div class="sec-circle">5</div>
+						</div>
+						<div class="sec-txts">
+							<span class="sec-txt" style="margin-right: 34px; width: 90px;">扫码加微信1（联系客服）</span>			
+							<span class="sec-txt" style="margin-right: 50px;">传递案件资料2</span>			
+							<span class="sec-txt" style="margin-right: 68px;">审核资料3</span>			
+							<span class="sec-txt" style="margin-right: 66px;">支付保费4</span>			
+							<span class="sec-txt">出具保函5</span>	
 						</div>					
 					</div>
 				</div>
@@ -599,6 +631,16 @@
 		} else {
 			$('#windowMenu').removeClass('fixed-window')
 		}
+	})
+	$('#switchMenu li').click(function () {
+		var idx = $(this).index()
+		$('#switchMenu li.main-active').removeClass('main-active')
+		$(this).addClass('main-active')
+		$('#part2 .sec.active').removeClass('active')
+		$('#part2 .sec').eq(idx).addClass('active')
+	})
+	$('#scrollTop').click(function () {
+		$(document).scrollTop(0)
 	})
 </script>
 </body>
