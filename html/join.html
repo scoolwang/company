@@ -6,101 +6,310 @@
 	<link rel="stylesheet" type="text/css" href="../css/footer.css">
 	<script type="text/javascript" src="../js/jquery.js"></script>
 	<style type="text/css">
-		.page .call-form .company-info {
-			padding-left: 0;
-			width: 440px;
+		.content {
+			margin: 0  auto;
+			width: 1330px;
+			display: flex;
 		}
-		.page ol li {
-			list-style: decimal;
-    	list-style-position: inside;
-    	line-height: 30px;
+		.join-page {
+			width: 100%;
+			position: absolute;
+			top: 185px;
 		}
-		.page ol {
-			padding: 0;
-			margin: 0;
+		.aside {
+			width: 1090px;
+			height: 680px;
+			background: #fff;
+			margin-right: 10px;
+			box-sizing: border-box;
+			padding: 85px 65px;
 		}
-		.page .articl {
-			line-height: 40px;
+		.menu  {
+			width: 230px;
+			height: 680px;
+			background: #fff;
+			box-sizing: border-box;
+			padding: 85px 40px;
 		}
-		.page .articl h4 {
-			color: #c0a587;
+		.part-name {
+			font-size: 28px;
 		}
-		.page .module {
+		.sec-title {
+			font-size: 18px;
+			margin-bottom: 15px;
+		}
+		.section {
 			margin-bottom: 30px;
+		}
+		.section li {
+			font-size: 14px;
+			color: #6d6d6d;
+			margin-bottom: 10px;
+		}
+		.hd {
+			display: flex;
+			margin-bottom: 40px;
+			border-bottom: 1px solid #e5e5e5;
+			padding: 0 10px 10px 10px;
+		}
+		.menu-hd {
+			padding-bottom: 10px;
+			margin-bottom: 40px;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		.bd {
+			padding: 0  10px;
+			height: 380px;
+			overflow-y: auto;
+			margin-bottom: 30px;
+		}
+		.time {
+			text-align: right;
+			flex: 1;
+			line-height: 40px;
+			color: #6d6d6d;
+		}
+		.button {
+			width: 140px;
+			background-color: #b18141;
+			border: 1px solid #b18141;
+			color: #fff;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			border-radius: 5px;		
+		}
+		.part-list li {
+			margin-bottom: 20px;
+			font-size: 14px;
+		}
+		.part-list li.active {
+			color: #d6a865;
+		}
+		.bd {
+			display: none;
+		}
+		.bd.active {
+			display: block;
+		}
+		.desc-content {
+			display: none;
+		}
+		.form  {
+			display: none;
+		}
+		.show {
+			display: block;
+		}
+		.group {
+			display: flex;
+			margin-bottom: 30px;
+		}
+		.cell {
+			flex: 1;
+			display: flex;
+			margin: 0 30px;
+		}
+		.cell input {
+			/*width: 338px;*/
+			border: 1px solid #dcdcdc;
+			height: 40px;
+			flex: 1;
+		}
+		.cell label {
+			line-height: 40px;
+			padding-right: 20px;
+			display: block;
+			width: 60px;
+		     text-align:justify;
+		      text-justify:distribute-all-lines;/*ie6-8*/
+		      text-align-last:justify;/* ie9*/
+		      -moz-text-align-last:justify;/*ff*/
+		      -webkit-text-align-last:justify;/*chrome 20+*/			
+		}
+		.cell .valid-input {
+			width: 173px;
+		}
+		.input {
+			display: flex;
+    		align-items: center;
+    		flex: 1;
+		}
+		.valid-img {
+			width: 100px;
+			height: 40px;
+			margin: 0 10px;
+		}
+		.cell textarea {
+			width: 100%;
+			height: 100px;
+			border: 1px solid #dcdcdc;
+		}
+		.upload-button {
+			background-color: #9f8f83;
+		}
+		.form-botton {
+			text-align: center;
+			display: flex;
+			justify-content: center;
+		}
+		.form-botton .button {
+			margin: 0 10px;
 		}
 	</style>
 </head>
 <body>
  
 <div id="header"></div>
-<div class="page call-page">
-	<div class="bar">
-		<div class="inner">
-			<span>当前位置: </span>
-			<a href="">首页></a>
-			<a href="">业务领域></a>
-			<span id="foldSelect">润兴溯源</span>
-		</div>
-	</div>
-	<div class="content clearfix">
-		<div class="menu-panel link-menu">
-			<ul class="menu" id="menuList">
-				<li><a href="">首页</a></li>
-				<li><a href="">走进润兴</a></li>
-				<li><a href="">下属企业</a></li>
-				<li><a href="">业务领域</a></li>
-				<li><a href="">新闻资讯</a></li>
-				<li><a href="">公司文化</a></li>
-				<li class="active"><a href="">加入我们</a></li>
-				<li><a href="">联系我们</a></li>
-			</ul>
-		</div>
-		<div class="articl-panel">
-			<div class="articl active" id="articl1">
-				<h2 class="title module-title">{加入<span>裕丰</span>}</h2>
-				<div class="module">
-					<h4>一.评级分析师:</h4>
-					<div><strong>岗位职责：</strong></div>
-					<ol>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-					</ol>
-					<div><strong>任职要求：</strong></div>
-					<ol>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-					</ol>					
-				</div>		
-				<div class="module">
-					<h4>一.评级分析师:</h4>
-					<div><strong>岗位职责：</strong></div>
-					<ol>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-					</ol>
-					<div><strong>任职要求：</strong></div>
-					<ol>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-						<li>深入了解评级思想、国际评级监管制度</li>
-					</ol>					
-				</div>								
+<div class="join-page">
+	<div class="content">
+		<div class="aside" id="aside">
+			<div class="hd">
+				<span class="part-name" id="partName">销售主管</span>
+				<span class="time">发布日期：2017-10-1</span>
 			</div>
+			<div class="desc-content" id="descContent">
+				<div class="bd active">
+					<h4 class="sec-title">岗位职责1</h4>
+					<ul class="section">
+						<li>1、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>2、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>3、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>4、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>5、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>6、以销售为导向，带领团队完成团队销售指标；</li>
+					</ul>
+					<h4 class="sec-title">任职要求</h4>
+					<ul class="section">
+						<li>1、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>2、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>3、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>4、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>5、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>6、以销售为导向，带领团队完成团队销售指标；</li>
+					</ul>
+				</div>
+				<div class="bd">
+					<h4 class="sec-title">岗位职责2</h4>
+					<ul class="section">
+						<li>1、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>2、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>3、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>4、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>5、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>6、以销售为导向，带领团队完成团队销售指标；</li>
+					</ul>
+					<h4 class="sec-title">任职要求</h4>
+					<ul class="section">
+						<li>1、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>2、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>3、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>4、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>5、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>6、以销售为导向，带领团队完成团队销售指标；</li>
+					</ul>
+				</div>
+				<div class="bd">
+					<h4 class="sec-title">岗位职责3</h4>
+					<ul class="section">
+						<li>1、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>2、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>3、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>4、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>5、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>6、以销售为导向，带领团队完成团队销售指标；</li>
+					</ul>
+					<h4 class="sec-title">任职要求</h4>
+					<ul class="section">
+						<li>1、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>2、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>3、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>4、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>5、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>6、以销售为导向，带领团队完成团队销售指标；</li>
+					</ul>
+				</div>
+				<div class="bd">
+					<h4 class="sec-title">岗位职责4</h4>
+					<ul class="section">
+						<li>1、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>2、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>3、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>4、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>5、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>6、以销售为导向，带领团队完成团队销售指标；</li>
+					</ul>
+					<h4 class="sec-title">任职要求</h4>
+					<ul class="section">
+						<li>1、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>2、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>3、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>4、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>5、以销售为导向，带领团队完成团队销售指标；</li>
+						<li>6、以销售为导向，带领团队完成团队销售指标；</li>
+					</ul>
+				</div>	
+				<div class="ft">
+					<button type="" class="button" id="openForm">应聘岗位</button>
+				</div>							
+			</div>
+
+			<div class="form show" id="form">
+				<div class="group">
+					<div class="cell">
+						<label>姓名：</label>
+						<div class="input">
+							<input type="" name="">
+						</div>
+					</div>
+					<div class="cell">
+						<label>电话：</label>
+						<div class="input">
+							<input type="" name="">
+						</div>
+					</div>
+				</div>
+				<div class="group">
+					<div class="cell">
+						<label>E-mail：</label>
+						<div class="input">
+							<input type="" name="">
+						</div>
+					</div>
+					<div class="cell">
+						<label>验证码：</label>
+						<div class="input">
+							<input type="" name="" class="valid-input">
+							<img class="valid-img" src="../res/valid-code.png" alt="">
+							<span>换一张?</span>
+						</div>
+					</div>
+				</div>
+				<div class="group">
+					<div class="cell">
+						<label>留言：</label>
+						<div class="input">
+							<textarea></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="form-botton">
+					<button class="button">立即提交</button>
+					<button class="button upload-button">上传简历</button>
+				</div>
+			</div>
+
+		</div>
+		<div class="menu">
+			<div class="menu-hd">
+				<span class="part-name">其他岗位</span>
+			</div>
+			<ul class="part-list" id="partList">
+				<li class="active">销售主管</li>
+				<li>业务经理</li>
+				<li>业务员</li>
+				<li>文员</li>
+			</ul>
 		</div>		
 	</div>
 
@@ -108,7 +317,21 @@
 <div id="footer"></div>
 <script type="text/javascript" src="../js/index.js"></script>
 <script type="text/javascript">
-	$('#callForm').load('../html/call-tpl.html')
+	$('#partList li').click(function () {
+		var idx = $(this).index()
+		var text = $(this).text()
+		$('#partList li.active').removeClass('active')
+		$(this).addClass('active')
+		$('#aside .bd.active').removeClass('active')
+		$('#aside .bd').eq(idx).addClass('active')
+		$('#partName').text(text)
+		$('#descContent').addClass('show')
+		$('#form').removeClass('show')		
+	})
+	$('#openForm').click(function () {
+		$('#form').addClass('show')
+		$('#descContent').removeClass('show')
+	})
 </script>
 </body>
 </html>

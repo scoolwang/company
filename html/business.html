@@ -13,6 +13,7 @@
 		.content-inner, .menu-inner {
 			width: 1330px;
 			margin: 0 auto;
+			position: relative;
 		}
 
 		.cover, .cover-img {
@@ -58,14 +59,12 @@
 		}
 		.roll-wrap {
 			position: relative;
-			padding-right: 30px;
 	    width: 100%;
 	    height: 95px;
 	    overflow: hidden;			
 		}
 		.roll_row .roll__list {
 		    width: 9999px;
-		    margin: 0 30px;
 		}		
 		.roll_row .roll__list li {
 	    float: left;
@@ -86,11 +85,13 @@
 		    background: url(../res/arrow.png) no-repeat center center;
 		}	
 		.control.pre {
-		  left: 0px;
+		  left: -30px;
+		  top: 0;
 		  transform: rotate(180deg)
 		}
 		.control.next {
-			right: 0px;
+			right: -30px;
+			top: 0;
 		}
 		.menu {
 			margin-top: 135px;
@@ -107,6 +108,9 @@
 		}
 		.module.active-module {
 			display: flex;
+		}
+		.roll-wrap .control {
+			opacity: 0;
 		}
 	</style>
 </head>
@@ -302,20 +306,23 @@
 		</div>
 		<div class="menu">
 			<div class="menu-inner">
-				<div class="roll-wrap roll_row" id="pageMenu">
-						<div>
-			        <ul class="roll__list" id="menuList" style="position: absolute; left: 0; top: 0;">
-			            <li idx="0" class="active">小额农户贷款担保业务</li>
-			            <li idx="1">诉讼保全担保</li>
-			            <li idx="2">公司贷款担保业务</li>
-			            <li idx="3">农贷卡分期担保业务</li>
-			            <li idx="4">工程履约保函业务</li>
-			        </ul>							
-						</div>
-
-		        <a class="control pre" href="javascript:;"></a>
-		        <a class="control next" href="javascript:;"></a>
-		    </div>				
+					<a class="control pre" id="controlPre" href="javascript:;"></a>
+					<div class="roll-wrap roll_row" id="pageMenu">
+							<div>
+				        <ul class="roll__list" id="menuList" style="position: absolute; left: 0; top: 0;">
+				            <li idx="0" class="active">小额农户贷款担保业务</li>
+				            <li idx="1">诉讼保全担保</li>
+				            <li idx="2">公司贷款担保业务</li>
+				            <li idx="3">农贷卡分期担保业务</li>
+				            <li idx="4">工程履约保函业务</li>
+				        </ul>							
+							</div>
+			        <a class="control pre" href="javascript:;"></a>
+			        <a class="control next" href="javascript:;"></a>
+			    </div>
+			    <a class="control next" id="controlNext" href="javascript:;"></a>				
+				</div>
+		    			
 			</div>
 	
 		</div>		
@@ -325,6 +332,11 @@
 <div id="footer"></div>
 <script type="text/javascript" src="../js/index.js"></script>
 <script>
+		let hash = window.location.hash.substr(1)
+		$('#moduleBox .active-module').removeClass('active-module')
+		$('#moduleBox .module').eq(hash).addClass('active-module')
+		$('#pageMenu .active').removeClass('active')
+		$('#pageMenu li').eq(hash).addClass('active')
     $('#pageMenu').rollSlide({
         orientation: 'left',
         num: 1,
@@ -338,6 +350,12 @@
     	$(event.srcElement).addClass('active')
     	$('#moduleBox .active-module').removeClass('active-module')
     	$('#moduleBox .module').eq(index).addClass('active-module')
+    })
+    $('#controlPre').click(function () {
+    	$('#pageMenu .pre').click()
+    })
+    $('#controlNext').click(function () {
+    	$('#pageMenu .next').click()
     })
 </script>
 </body>
