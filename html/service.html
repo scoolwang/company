@@ -30,6 +30,40 @@
 			margin-right: 5px;
 			font-size: 0;
 			margin-bottom: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.img-box:hover .desc-box {
+			opacity: 1;
+		}
+		.desc-box {
+			background: #fff;
+			position: absolute;
+			width: 305px;
+			height: 102px;
+			display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		opacity: 0;
+    		box-sizing: border-box;
+		}
+		.text {
+			font-size: 18px;
+			color: #000;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+		.en-text {
+			color: #181818;
+			font-size: 12px;
+			opacity: 0.6;
+			text-align: center;
+		}
+		.right-box .desc-box{
+			width: 245px;
+			height: 116px;
+			padding: 0 40px;
 		}
 	</style>
 </head>
@@ -58,24 +92,63 @@
 		<div class="img-list">
 			<div>
 				<div class="img-box main-box">
-					<img src="../res/sbg-5.jpg" width="547" height="354" alt="">
+					<img src="../res/sbg-2.jpg" width="547" height="354" alt="">
+					<div class="desc-box">
+						<div>
+							<p class="text">全省范围内中小微企业</p>
+							<p class="en-text">Small and medium micro-enterprises</p>
+						</div>
+					</div>
 				</div>
 				<div class="img-box">
 					<img src="../res/sbg-5.jpg" alt="">
+					<div class="desc-box">
+						<div>
+							<p class="text">三农经营户</p>
+							<p class="en-text">Three rural households</p>
+						</div>
+					</div>					
 				</div>
 			</div>
 			<div>
-				<img src="../res/sbg-1.png" alt="">
+				<div class="img-box">
+					<img src="../res/sbg-1.png" alt="">
+					<div class="desc-box">
+						<div>
+							<p class="text">城镇个体从业人员</p>
+							<p class="en-text">Urban individual practitioners</p>
+						</div>
+					</div>				
+				</div>
+				
 			</div>
-			<div>
+			<div class="right-box">
 				<div class="img-box">
 					<img src="../res/sbg-6.jpg" alt="">
+					<div class="desc-box">
+						<div>
+							<p class="text">大学生创业人员</p>
+							<p class="en-text">College students entrepreneurs</p>
+						</div>
+					</div>					
 				</div>
 				<div class="img-box">
 					<img src="../res/sbg-4.jpg" alt="">
+					<div class="desc-box">
+						<div>
+							<p class="text">工程业主</p>
+							<p class="en-text">Project owner</p>
+						</div>
+					</div>					
 				</div>
 				<div class="img-box">
 					<img src="../res/sbg-3.jpg" alt="">
+					<div class="desc-box">
+						<div>
+							<p class="text">全省乃至全国 <br />诉讼案件申请人</p>
+							<p class="en-text">Litigation case applicant</p>
+						</div>
+					</div>					
 				</div>
 			</div>
 		</div>
@@ -85,11 +158,11 @@
 <div id="footer"></div>
 <script type="text/javascript" src="../js/index.js"></script>
 <script type="text/javascript">
-	$('.main-box').hover(function () {
-		$('.main-box img').attr('src', '../res/sbg-2.jpg')
-	}, function () {
-		$('.main-box img').attr('src', '../res/sbg-5.jpg')
-	})
+	// $('.main-box').hover(function () {
+	// 	$('.main-box img').attr('src', '../res/sbg-2.jpg')
+	// }, function () {
+	// 	$('.main-box img').attr('src', '../res/sbg-5.jpg')
+	// })
 </script>
 </body>
 </html>
