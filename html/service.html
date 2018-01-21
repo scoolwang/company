@@ -57,8 +57,8 @@
 		<p class="page-desc">全省范围内中小微企业、“三农”经营户、城镇个体从业人员、大学生创业人员、工程业主；全省乃至全国诉讼案件申请人。</p>
 		<div class="img-list">
 			<div>
-				<div class="img-box">
-					<img src="../res/sbg-2.jpg" alt="">
+				<div class="img-box main-box">
+					<img src="../res/sbg-5.jpg" width="547" height="354" alt="">
 				</div>
 				<div class="img-box">
 					<img src="../res/sbg-5.jpg" alt="">
@@ -84,5 +84,12 @@
 </div>
 <div id="footer"></div>
 <script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+	$('.main-box').hover(function () {
+		$('.main-box img').attr('src', '../res/sbg-2.jpg')
+	}, function () {
+		$('.main-box img').attr('src', '../res/sbg-5.jpg')
+	})
+</script>
 </body>
 </html>
